@@ -1,0 +1,48 @@
+# ConciseKit 0.0.1
+
+A set of Objective-C additions and macros that lets you to write code more quickly.
+
+## Macros
+
+### General shorthands
+
+        $new(Foo)       => [[[Foo alloc] init] autorelease]
+        $eql(foo, bar)  => [foo isEqual:bar]
+
+### NSArray shorthands
+
+        $arr(foo, bar)   =>  [NSArray arrayWithObjects:foo, bar, nil]
+        $marr(foo, bar)  =>  [NSMutableArray ...]
+
+### NSSet shorthands
+
+        $set(foo, bar)   =>  [NSSet setWithObjects:foo, bar, nil]
+        $mset(foo, bar)  =>  [NSMutableSet ...]
+
+### NSDictionary shorthands
+
+        $dict(v1, k1, v2, k2)  => [NSDictionary dictionaryWithObjectsAndKeys:v1, k1, v2, k2, nil]
+        $mdict(v1, k1, v2, k2) => [NSMutableDictionary ...]
+
+### NSString shorthands
+
+        $str(@"foo: %@", bar)   => [NSString stringWithFormat:@"foo: %@", bar]
+        $mstr(@"foo: %@", bar)  => [NSMutableString ...]
+
+### NSNumber shorthands
+
+        $bool(YES)    => [NSNumber numberWithBool:YES]
+        $int(123)     => [NSNumber numberWithInt:123]
+        $float(123.4) => [NSNumber numberWithFloat:123.4]
+
+        $char(), $double(), $integer(), $long(), $longLong(), $short(), 
+        $uChar(), $uInt(), $uInteger(), $uLong(), $uLongLong(), $uShort()
+
+### NSValue shorthands
+        $nonRetained(), $pointer(), $point(), $range(), $rect(), $size()
+
+## Additions
+
+## License
+
+Copyright (c) 2010 Peter Jihoon Kim. This code is licensed under the MIT License.
