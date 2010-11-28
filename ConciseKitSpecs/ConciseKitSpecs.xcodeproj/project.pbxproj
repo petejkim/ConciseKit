@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E91C438112985E4F001522E5 /* CedarAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E92CB57F1296E1D800BF1922 /* CedarAdditions.m */; };
+		E91C438212985E4F001522E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E91C436912985C8A001522E5 /* main.m */; };
+		E91C438312985E4F001522E5 /* ConciseKitSpecsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E91C433212985A68001522E5 /* ConciseKitSpecsAppDelegate.m */; };
+		E91C438512985E5A001522E5 /* Specs.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91C435D12985BD9001522E5 /* Specs.xib */; };
+		E91C43C312985E7D001522E5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E91C43C412985E7D001522E5 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4EC1296DF2B00BF1922 /* Cedar.framework */; };
+		E91C43C512985E7D001522E5 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */; };
+		E91C43C612985E7D001522E5 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
+		E965CE8C12A17FC400416CDF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8A12A17FC400416CDF /* LICENSE */; };
+		E965CE8D12A17FC400416CDF /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8B12A17FC400416CDF /* README.markdown */; };
+		E965CE9412A1805800416CDF /* CKMacrosSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CE9312A1805800416CDF /* CKMacrosSpec.m */; };
+		E965CEA712A1816600416CDF /* NSArray+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */; };
+		E965CFBA12A1893100416CDF /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFB912A1893100416CDF /* ConciseKit.m */; };
+		E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFC112A18A5000416CDF /* ConciseKitSpec.m */; };
+		E9E4CF061298753B0093F83D /* Cedar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4EC1296DF2B00BF1922 /* Cedar.framework */; };
+		E9E4CF071298753B0093F83D /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */; };
+		E9E4CF081298753B0093F83D /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E9E4CF32129875740093F83D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E9E4CF061298753B0093F83D /* Cedar.framework in CopyFiles */,
+				E9E4CF071298753B0093F83D /* OCHamcrest.framework in CopyFiles */,
+				E9E4CF081298753B0093F83D /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		E91C433212985A68001522E5 /* ConciseKitSpecsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpecsAppDelegate.m; sourceTree = "<group>"; };
+		E91C435B12985B77001522E5 /* ConciseKitSpecs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConciseKitSpecs-Info.plist"; sourceTree = "<group>"; };
+		E91C435D12985BD9001522E5 /* Specs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Specs.xib; sourceTree = "<group>"; };
+		E91C436912985C8A001522E5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E91C437B12985DDD001522E5 /* ConciseKitSpecs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConciseKitSpecs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92CB4EC1296DF2B00BF1922 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cedar.framework; sourceTree = "<group>"; };
+		E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrest.framework; sourceTree = "<group>"; };
+		E92CB4F01296DF2B00BF1922 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
+		E92CB55C1296E0E600BF1922 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		E92CB57E1296E1D800BF1922 /* CedarAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CedarAdditions.h; sourceTree = "<group>"; };
+		E92CB57F1296E1D800BF1922 /* CedarAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CedarAdditions.m; sourceTree = "<group>"; };
+		E965CE8812A17FC400416CDF /* CKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMacros.h; sourceTree = "<group>"; };
+		E965CE8912A17FC400416CDF /* ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciseKit.h; sourceTree = "<group>"; };
+		E965CE8A12A17FC400416CDF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E965CE8B12A17FC400416CDF /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		E965CE9312A1805800416CDF /* CKMacrosSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMacrosSpec.m; sourceTree = "<group>"; };
+		E965CEA512A1816600416CDF /* NSArray+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ConciseKit.h"; sourceTree = "<group>"; };
+		E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ConciseKit.m"; sourceTree = "<group>"; };
+		E965CFB912A1893100416CDF /* ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKit.m; sourceTree = "<group>"; };
+		E965CFC012A18A1E00416CDF /* CKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAdditions.h; sourceTree = "<group>"; };
+		E965CFC112A18A5000416CDF /* ConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpec.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E91C437912985DDD001522E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91C43C312985E7D001522E5 /* Cocoa.framework in Frameworks */,
+				E91C43C412985E7D001522E5 /* Cedar.framework in Frameworks */,
+				E91C43C512985E7D001522E5 /* OCHamcrest.framework in Frameworks */,
+				E91C43C612985E7D001522E5 /* OCMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E91C437B12985DDD001522E5 /* ConciseKitSpecs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* ConciseKit */ = {
+			isa = PBXGroup;
+			children = (
+				E965CE8712A17F9300416CDF /* ConciseKit */,
+				E92CB3401296DC6100BF1922 /* Spec */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = ConciseKit;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				E92CB4EC1296DF2B00BF1922 /* Cedar.framework */,
+				E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */,
+				E92CB4F01296DF2B00BF1922 /* OCMock.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E92CB3401296DC6100BF1922 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				E92CB3441296DCAC00BF1922 /* Support */,
+				E965CE9312A1805800416CDF /* CKMacrosSpec.m */,
+				E965CFC112A18A5000416CDF /* ConciseKitSpec.m */,
+			);
+			path = Spec;
+			sourceTree = "<group>";
+		};
+		E92CB3441296DCAC00BF1922 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E92CB55C1296E0E600BF1922 /* SpecHelper.h */,
+				E92CB57E1296E1D800BF1922 /* CedarAdditions.h */,
+				E92CB57F1296E1D800BF1922 /* CedarAdditions.m */,
+				E91C436912985C8A001522E5 /* main.m */,
+				E91C433212985A68001522E5 /* ConciseKitSpecsAppDelegate.m */,
+				E91C435B12985B77001522E5 /* ConciseKitSpecs-Info.plist */,
+				E91C435D12985BD9001522E5 /* Specs.xib */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E965CE8712A17F9300416CDF /* ConciseKit */ = {
+			isa = PBXGroup;
+			children = (
+				E965CE8B12A17FC400416CDF /* README.markdown */,
+				E965CE8A12A17FC400416CDF /* LICENSE */,
+				E965CE8912A17FC400416CDF /* ConciseKit.h */,
+				E965CFB912A1893100416CDF /* ConciseKit.m */,
+				E965CE8812A17FC400416CDF /* CKMacros.h */,
+				E965CFC012A18A1E00416CDF /* CKAdditions.h */,
+				E965CEA512A1816600416CDF /* NSArray+ConciseKit.h */,
+				E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */,
+			);
+			name = ConciseKit;
+			path = ..;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E91C437A12985DDD001522E5 /* ConciseKitSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91C438012985DDE001522E5 /* Build configuration list for PBXNativeTarget "ConciseKitSpecs" */;
+			buildPhases = (
+				E9E4CF32129875740093F83D /* CopyFiles */,
+				E91C437712985DDD001522E5 /* Resources */,
+				E91C437812985DDD001522E5 /* Sources */,
+				E91C437912985DDD001522E5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConciseKitSpecs;
+			productName = ConciseKitSpecs;
+			productReference = E91C437B12985DDD001522E5 /* ConciseKitSpecs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ConciseKitSpecs" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* ConciseKit */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E91C437A12985DDD001522E5 /* ConciseKitSpecs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E91C437712985DDD001522E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91C438512985E5A001522E5 /* Specs.xib in Resources */,
+				E965CE8C12A17FC400416CDF /* LICENSE in Resources */,
+				E965CE8D12A17FC400416CDF /* README.markdown in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E91C437812985DDD001522E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91C438112985E4F001522E5 /* CedarAdditions.m in Sources */,
+				E91C438212985E4F001522E5 /* main.m in Sources */,
+				E91C438312985E4F001522E5 /* ConciseKitSpecsAppDelegate.m in Sources */,
+				E965CE9412A1805800416CDF /* CKMacrosSpec.m in Sources */,
+				E965CEA712A1816600416CDF /* NSArray+ConciseKit.m in Sources */,
+				E965CFBA12A1893100416CDF /* ConciseKit.m in Sources */,
+				E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E91C437E12985DDD001522E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Spec/Support/ConciseKitSpecs-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConciseKitSpecs;
+			};
+			name = Debug;
+		};
+		E91C437F12985DDD001522E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Spec/Support/ConciseKitSpecs-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = ConciseKitSpecs;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ConciseKitSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E91C438012985DDE001522E5 /* Build configuration list for PBXNativeTarget "ConciseKitSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91C437E12985DDD001522E5 /* Debug */,
+				E91C437F12985DDD001522E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
