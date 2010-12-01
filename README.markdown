@@ -1,6 +1,15 @@
-# ConciseKit 0.0.1
+# ConciseKit 0.0.1 - under heavy development
 
 A set of Objective-C additions and macros that lets you to write code more quickly.
+
+## $ class
+
+### Path
+
+        [$ homePath];     => path to user's home directory
+        [$ desktopPath];  => path to user's desktop directory
+        [$ documentPath]; => path to user's document directory
+        [$ appPath];      => ptah to app directory
 
 ## Macros
 
