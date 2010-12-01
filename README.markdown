@@ -19,6 +19,14 @@ A set of Objective-C additions and macros that lets you to write code more quick
         [$ documentPath] => path to user's document directory
         [$ appPath]      => path to app directory
 
+### waitUntil
+
+Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds, checking is done every 0.1 seconds.
+
+        [$ waitUntil:^{ (BOOL)(someConditionIsMet == YES) }]
+        [$ waitUntil:^{ (BOOL)(someConditionIsMet == YES) } timeOut:10.0]
+        [$ waitUntil:^{ (BOOL)(someConditionIsMet == YES) } timeOut:10.0 interval:0.1]
+
 ## Macros
 
 ### General shorthands

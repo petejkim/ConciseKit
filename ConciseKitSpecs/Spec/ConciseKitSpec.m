@@ -5,7 +5,7 @@
 #import "SpecHelper.h"
 #import "ConciseKit.h"
 #import "Foo.h"
-#import <objc/objc-class.h>
+#import "CKMocks.h"
 
 DESCRIBE($) {
   describe(@"path", ^{
@@ -126,6 +126,51 @@ DESCRIBE($) {
         [$ swizzleClassMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]];
         assertThat([Foo foo], equalTo(@"+foo"));
         assertThat([Bar bar], equalTo(@"+Bar::bar"));
+      });
+    });
+  });
+
+  describe(@"waitUntil", ^{
+    __block BOOL (^condition)(void);
+
+    beforeEach(^{
+      [CKMocks resetAll];
+      condition = ^{
+        return YES;
+      };
+    });
+
+    describe(@"+waitUntil:timeOut:interval:", ^{
+      it(@"waits until condition is met", ^{
+        __block BOOL performed = NO;
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+          performed = YES;
+        }];
+        assertThatBool(performed, equalToBool(NO));
+        [$ waitUntil:^{ return (BOOL)(performed == YES); } timeOut:10.0 interval:0.1];
+        assertThatBool(performed, equalToBool(YES));
+      });
+    });
+
+    describe(@"+waitUntil:timeOut:", ^{
+      it(@"calls +waitUntil:timeOut:interval: with interval=0.1", ^{
+        [$ swizzleClassMethod:@selector(waitUntil:timeOut:interval:) in:[$ class] with:@selector(waitUntil:timeOut:interval:) in:[CKMocks class]];
+        [$ waitUntil:condition timeOut:20.0];
+        NSArray *array = [CKMocks callsForSelector:@selector(waitUntil:timeOut:interval:) in:[$ class]];
+        assertThatUnsignedInteger([array count], equalToUnsignedInteger(1));
+        assertThat([array $at:0], equalTo($arr(condition, $double(20.0), $double(0.1))));
+        [$ swizzleClassMethod:@selector(waitUntil:timeOut:interval:) in:[$ class] with:@selector(waitUntil:timeOut:interval:) in:[CKMocks class]];
+      });
+    });
+
+    describe(@"+waitUntil:", ^{
+      it(@"calls +waitUntil:timeOut:interval: with timeOut=10.0, interval=0.1", ^{
+        [$ swizzleClassMethod:@selector(waitUntil:timeOut:interval:) in:[$ class] with:@selector(waitUntil:timeOut:interval:) in:[CKMocks class]];
+        [$ waitUntil:condition];
+        NSArray *array = [CKMocks callsForSelector:@selector(waitUntil:timeOut:interval:) in:[$ class]];
+        assertThatUnsignedInteger([array count], equalToUnsignedInteger(1));
+        assertThat([array $at:0], equalTo($arr(condition, $double(10.0), $double(0.1))));
+        [$ swizzleClassMethod:@selector(waitUntil:timeOut:interval:) in:[$ class] with:@selector(waitUntil:timeOut:interval:) in:[CKMocks class]];
       });
     });
   });

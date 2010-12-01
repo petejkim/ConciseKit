@@ -18,6 +18,10 @@
 + (BOOL)swizzleClassMethod:(SEL)originalSelector with:(SEL)anotherSelector in:(Class)klass;
 + (BOOL)swizzleClassMethod:(SEL)originalSelector in:(Class)klass with:(SEL)anotherSelector in:(Class)anotherKlass;
 
++ (void)waitUntil:(BOOL (^)(void))condition;
++ (void)waitUntil:(BOOL (^)(void))condition timeOut:(NSTimeInterval)timeOut;
++ (void)waitUntil:(BOOL (^)(void))condition timeOut:(NSTimeInterval)timeOut interval:(NSTimeInterval)interval;
+
 @end
 
 @interface $ : ConciseKit {}

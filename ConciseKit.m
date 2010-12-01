@@ -69,6 +69,25 @@
   return YES;
 }
 
++ (void)waitUntil:(BOOL (^)(void))condition {
+  [self waitUntil:condition timeOut:10.0 interval:0.1];
+}
+
++ (void)waitUntil:(BOOL (^)(void))condition timeOut:(NSTimeInterval)timeOut {
+  [self waitUntil:condition timeOut:timeOut interval:0.1];
+}
+
++ (void)waitUntil:(BOOL (^)(void))condition timeOut:(NSTimeInterval)timeOut interval:(NSTimeInterval)interval {
+  NSTimeInterval sleptSoFar=0;
+  while(1) {
+    if(condition() || (sleptSoFar >= timeOut)) {
+      return;
+    }
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:interval]];
+    sleptSoFar += interval;
+  }
+}
+
 @end
 
 @implementation $
