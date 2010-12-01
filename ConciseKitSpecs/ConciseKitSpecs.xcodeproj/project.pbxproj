@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90DAB9D12A66B1D000A36AE /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90DAB9C12A66B1D000A36AE /* Foo.m */; };
 		E91C438112985E4F001522E5 /* CedarAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E92CB57F1296E1D800BF1922 /* CedarAdditions.m */; };
 		E91C438212985E4F001522E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E91C436912985C8A001522E5 /* main.m */; };
 		E91C438312985E4F001522E5 /* ConciseKitSpecsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E91C433212985A68001522E5 /* ConciseKitSpecsAppDelegate.m */; };
@@ -17,7 +18,7 @@
 		E91C43C612985E7D001522E5 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
 		E965CE8C12A17FC400416CDF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8A12A17FC400416CDF /* LICENSE */; };
 		E965CE8D12A17FC400416CDF /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8B12A17FC400416CDF /* README.markdown */; };
-		E965CE9412A1805800416CDF /* CKMacrosSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CE9312A1805800416CDF /* CKMacrosSpec.m */; };
+		E965CE9412A1805800416CDF /* NSArrayConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */; };
 		E965CEA712A1816600416CDF /* NSArray+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */; };
 		E965CFBA12A1893100416CDF /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFB912A1893100416CDF /* ConciseKit.m */; };
 		E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFC112A18A5000416CDF /* ConciseKitSpec.m */; };
@@ -46,6 +47,8 @@
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		E90DAB9B12A66B1D000A36AE /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		E90DAB9C12A66B1D000A36AE /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		E91C433212985A68001522E5 /* ConciseKitSpecsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpecsAppDelegate.m; sourceTree = "<group>"; };
 		E91C435B12985B77001522E5 /* ConciseKitSpecs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConciseKitSpecs-Info.plist"; sourceTree = "<group>"; };
 		E91C435D12985BD9001522E5 /* Specs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Specs.xib; sourceTree = "<group>"; };
@@ -61,7 +64,7 @@
 		E965CE8912A17FC400416CDF /* ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciseKit.h; sourceTree = "<group>"; };
 		E965CE8A12A17FC400416CDF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E965CE8B12A17FC400416CDF /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		E965CE9312A1805800416CDF /* CKMacrosSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMacrosSpec.m; sourceTree = "<group>"; };
+		E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayConciseKitSpec.m; sourceTree = "<group>"; };
 		E965CEA512A1816600416CDF /* NSArray+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ConciseKit.h"; sourceTree = "<group>"; };
 		E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ConciseKit.m"; sourceTree = "<group>"; };
 		E965CFB912A1893100416CDF /* ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKit.m; sourceTree = "<group>"; };
@@ -117,11 +120,21 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		E90DAB9012A66AC3000A36AE /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				E90DAB9B12A66B1D000A36AE /* Foo.h */,
+				E90DAB9C12A66B1D000A36AE /* Foo.m */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		E92CB3401296DC6100BF1922 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
+				E90DAB9012A66AC3000A36AE /* Fixtures */,
 				E92CB3441296DCAC00BF1922 /* Support */,
-				E965CE9312A1805800416CDF /* CKMacrosSpec.m */,
+				E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */,
 				E965CFC112A18A5000416CDF /* ConciseKitSpec.m */,
 			);
 			path = Spec;
@@ -223,10 +236,11 @@
 				E91C438112985E4F001522E5 /* CedarAdditions.m in Sources */,
 				E91C438212985E4F001522E5 /* main.m in Sources */,
 				E91C438312985E4F001522E5 /* ConciseKitSpecsAppDelegate.m in Sources */,
-				E965CE9412A1805800416CDF /* CKMacrosSpec.m in Sources */,
+				E965CE9412A1805800416CDF /* NSArrayConciseKitSpec.m in Sources */,
 				E965CEA712A1816600416CDF /* NSArray+ConciseKit.m in Sources */,
 				E965CFBA12A1893100416CDF /* ConciseKit.m in Sources */,
 				E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */,
+				E90DAB9D12A66B1D000A36AE /* Foo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

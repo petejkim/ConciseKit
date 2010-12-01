@@ -13,6 +13,9 @@
 + (NSString *)documentPath;
 + (NSString *)appPath;
 
++ (BOOL)swizzleMethod:(SEL)originalSelector with:(SEL)anotherSelector inClass:(Class)klass;
++ (BOOL)swizzleClassMethod:(SEL)originalSelector with:(SEL)anotherSelector inClass:(Class)klass;
+
 @end
 
 @interface $ : ConciseKit {}

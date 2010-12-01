@@ -4,6 +4,7 @@
  */
 #import "SpecHelper.h"
 #import "ConciseKit.h"
+#import "Foo.h"
 
 DESCRIBE($) {
   describe(@"path", ^{
@@ -28,6 +29,36 @@ DESCRIBE($) {
     describe(@"+appPath", ^{
       it(@"returns the app's directory", ^{
         assertThat([$ appPath], endsWith(@"ConciseKitSpecs.app"));
+      });
+    });
+  });
+
+  describe(@"method swizzling", ^{
+    describe(@"+swizzleMethod:with:inClass:", ^{
+      it(@"swizzles instances methods", ^{
+        Foo *obj = [[Foo alloc] init];
+        assertThat([obj foo], equalTo(@"-foo"));
+        assertThat([obj bar], equalTo(@"-bar"));
+        [$ swizzleMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
+        assertThat([obj foo], equalTo(@"-bar"));
+        assertThat([obj bar], equalTo(@"-foo"));
+        [$ swizzleMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
+        assertThat([obj foo], equalTo(@"-foo"));
+        assertThat([obj bar], equalTo(@"-bar"));
+        [obj release];
+      });
+    });
+
+    describe(@"+swizzleClassMethod:with:inClass:", ^{
+      it(@"swizzles class methods", ^{
+        assertThat([Foo foo], equalTo(@"+foo"));
+        assertThat([Foo bar], equalTo(@"+bar"));
+        [$ swizzleClassMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
+        assertThat([Foo foo], equalTo(@"+bar"));
+        assertThat([Foo bar], equalTo(@"+foo"));
+        [$ swizzleClassMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
+        assertThat([Foo foo], equalTo(@"+foo"));
+        assertThat([Foo bar], equalTo(@"+bar"));
       });
     });
   });

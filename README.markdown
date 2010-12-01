@@ -4,6 +4,11 @@ A set of Objective-C additions and macros that lets you to write code more quick
 
 ## $ class
 
+### Method Swizzling
+
+        [$ swizzleMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
+        [$ swizzleClassMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
+
 ### Path
 
         [$ homePath];     => path to user's home directory
