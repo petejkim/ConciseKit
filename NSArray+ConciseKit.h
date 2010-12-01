@@ -11,3 +11,9 @@
 - (id)$at:(NSUInteger)index;
 
 @end
+
+@interface NSMutableArray (ConciseKit)
+
+- (id)$push:(id)anObject;
+
+@end

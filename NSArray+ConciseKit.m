@@ -18,5 +18,13 @@
   return [self objectAtIndex:index];
 }
 
+@end
+
+@implementation NSMutableArray (ConciseKit)
+
+- (id)$push:(id)anObject {
+  [self addObject:anObject];
+  return self;
+}
 
 @end

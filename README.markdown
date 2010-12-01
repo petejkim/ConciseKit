@@ -6,18 +6,18 @@ A set of Objective-C additions and macros that lets you to write code more quick
 
 ### Method Swizzling
 
-        [$ swizzleMethod:@selector(foo) with:@selector(bar) in:[Foo class]];
-        [$ swizzleMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]];
+        [$ swizzleMethod:@selector(foo) with:@selector(bar) in:[Foo class]]
+        [$ swizzleMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]]
 
-        [$ swizzleClassMethod:@selector(foo) with:@selector(bar) in:[Foo class]];
-        [$ swizzleClassMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]];
+        [$ swizzleClassMethod:@selector(foo) with:@selector(bar) in:[Foo class]]
+        [$ swizzleClassMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]]
 
 ### Path
 
-        [$ homePath];     => path to user's home directory
-        [$ desktopPath];  => path to user's desktop directory
-        [$ documentPath]; => path to user's document directory
-        [$ appPath];      => path to app directory
+        [$ homePath]     => path to user's home directory
+        [$ desktopPath]  => path to user's desktop directory
+        [$ documentPath] => path to user's document directory
+        [$ appPath]      => path to app directory
 
 ## Macros
 
@@ -62,9 +62,13 @@ A set of Objective-C additions and macros that lets you to write code more quick
 
 ### NSArray
 
-        [array $first] => [array objectAtIndex:0];
-        [array $last]  => [array lastObject];
-        [array $at:1]  => [array objectAtIndex:1];
+        [array $first] => [array objectAtIndex:0]
+        [array $last]  => [array lastObject]
+        [array $at:1]  => [array objectAtIndex:1]
+
+### NSMutableArray
+
+        [array $push:foo] => [array addObject:foo] (returns self)
 
 ## License
 
