@@ -6,15 +6,18 @@ A set of Objective-C additions and macros that lets you to write code more quick
 
 ### Method Swizzling
 
-        [$ swizzleMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
-        [$ swizzleClassMethod:@selector(foo) with:@selector(bar) inClass:[Foo class]];
+        [$ swizzleMethod:@selector(foo) with:@selector(bar) in:[Foo class]];
+        [$ swizzleMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]];
+
+        [$ swizzleClassMethod:@selector(foo) with:@selector(bar) in:[Foo class]];
+        [$ swizzleClassMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]];
 
 ### Path
 
         [$ homePath];     => path to user's home directory
         [$ desktopPath];  => path to user's desktop directory
         [$ documentPath]; => path to user's document directory
-        [$ appPath];      => ptah to app directory
+        [$ appPath];      => path to app directory
 
 ## Macros
 

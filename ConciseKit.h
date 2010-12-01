@@ -13,8 +13,10 @@
 + (NSString *)documentPath;
 + (NSString *)appPath;
 
-+ (BOOL)swizzleMethod:(SEL)originalSelector with:(SEL)anotherSelector inClass:(Class)klass;
-+ (BOOL)swizzleClassMethod:(SEL)originalSelector with:(SEL)anotherSelector inClass:(Class)klass;
++ (BOOL)swizzleMethod:(SEL)originalSelector with:(SEL)anotherSelector in:(Class)klass;
++ (BOOL)swizzleMethod:(SEL)originalSelector in:(Class)klass with:(SEL)anotherSelector in:(Class)anotherKlass;
++ (BOOL)swizzleClassMethod:(SEL)originalSelector with:(SEL)anotherSelector in:(Class)klass;
++ (BOOL)swizzleClassMethod:(SEL)originalSelector in:(Class)klass with:(SEL)anotherSelector in:(Class)anotherKlass;
 
 @end
 
