@@ -6,6 +6,8 @@
 
 @interface NSArray (ConciseKit)
 
-- (id)firstObject;
+- (id)$first;
+- (id)$last;
+- (id)$at:(NSUInteger)index;
 
 @end

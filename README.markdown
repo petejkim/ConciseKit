@@ -60,6 +60,12 @@ A set of Objective-C additions and macros that lets you to write code more quick
 
 ## Additions
 
+### NSArray
+
+        [array $first] => [array objectAtIndex:0];
+        [array $last]  => [array lastObject];
+        [array $at:1]  => [array objectAtIndex:1];
+
 ## License
 
 Copyright (c) 2010 Peter Jihoon Kim. This code is licensed under the MIT License.

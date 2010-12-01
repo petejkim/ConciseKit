@@ -6,8 +6,17 @@
 
 @implementation NSArray (ConciseKit)
 
-- (id)firstObject {
+- (id)$first {
   return [self objectAtIndex:0];
 }
+
+- (id)$last {
+  return [self lastObject];
+}
+
+- (id)$at:(NSUInteger)index {
+  return [self objectAtIndex:index];
+}
+
 
 @end
