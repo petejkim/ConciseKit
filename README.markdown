@@ -60,11 +60,11 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         $int(123)     => [NSNumber numberWithInt:123]
         $float(123.4) => [NSNumber numberWithFloat:123.4]
 
-        $char(), $double(), $integer(), $long(), $longLong(), $short(), 
-        $uChar(), $uInt(), $uInteger(), $uLong(), $uLongLong(), $uShort()
+        $char(), $double(), $integer(), $long(), $longlong(), $short(),
+        $uchar(), $uint(), $uinteger(), $ulong(), $ulonglong(), $ushort()
 
 ### NSValue shorthands
-        $nonRetained(), $pointer(), $point(), $range(), $rect(), $size()
+        $nonretained(), $pointer(), $point(), $range(), $rect(), $size()
 
 ## Additions
 
