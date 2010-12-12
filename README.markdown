@@ -74,6 +74,36 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [array $last]  => [array lastObject]
         [array $at:1]  => [array objectAtIndex:1]
 
+        [array $each:^(id obj) {
+          NSLog(@"%@", obj);
+        }]
+
+        [array $eachWithIndex:^(id obj, NSUInteger i) {
+          NSLog(@"%d %@", i, obj);
+        }]
+
+        [array $eachWithStop:^(id obj, BOOL *stop) {
+          NSLog(@"%@", obj);
+          if($eql(obj, @"foo")) {
+            *stop = YES;
+          }
+        }]
+
+        [array $eachWithIndexAndStop:^(id obj, NSUInteger i, BOOL *stop) {
+          NSLog(@"%d %@", i, obj);
+          if(i == 1) {
+            *stop = YES;
+          }
+        }]
+
+        [array $map:^(id obj) {
+          return $integer([obj integerValue] * 2);
+        }]
+
+        [array $mapWithIndex:^(id obj, NSUInteger i) {
+          return $integer([obj integerValue] * 2 + i);
+        }]
+
 ### NSMutableArray
 
         [array $push:foo] => [array addObject:foo] (+ returns self)
