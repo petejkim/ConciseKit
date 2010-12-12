@@ -22,7 +22,7 @@
 
 @implementation NSMutableArray (ConciseKit)
 
-- (id)$push:(id)anObject {
+- (NSMutableArray *)$push:(id)anObject {
   [self addObject:anObject];
   return self;
 }

@@ -76,7 +76,7 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 
 ### NSMutableArray
 
-        [array $push:foo] => [array addObject:foo] (returns self)
+        [array $push:foo] => [array addObject:foo] (+ returns self)
 
 ## License
 

@@ -14,6 +14,6 @@
 
 @interface NSMutableArray (ConciseKit)
 
-- (id)$push:(id)anObject;
+- (NSMutableArray *)$push:(id)anObject;
 
 @end
