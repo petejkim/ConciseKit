@@ -23,6 +23,8 @@
 		E965CEA712A1816600416CDF /* NSArray+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */; };
 		E965CFBA12A1893100416CDF /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFB912A1893100416CDF /* ConciseKit.m */; };
 		E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFC112A18A5000416CDF /* ConciseKitSpec.m */; };
+		E9692C2112B4B45400520396 /* NSString+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E9692C2012B4B45400520396 /* NSString+ConciseKit.m */; };
+		E9692C2612B4B4FF00520396 /* NSStringConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */; };
 		E9E4CF061298753B0093F83D /* Cedar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4EC1296DF2B00BF1922 /* Cedar.framework */; };
 		E9E4CF071298753B0093F83D /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */; };
 		E9E4CF081298753B0093F83D /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
@@ -73,6 +75,9 @@
 		E965CFB912A1893100416CDF /* ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKit.m; sourceTree = "<group>"; };
 		E965CFC012A18A1E00416CDF /* CKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAdditions.h; sourceTree = "<group>"; };
 		E965CFC112A18A5000416CDF /* ConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpec.m; sourceTree = "<group>"; };
+		E9692C1F12B4B45400520396 /* NSString+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ConciseKit.h"; sourceTree = "<group>"; };
+		E9692C2012B4B45400520396 /* NSString+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ConciseKit.m"; sourceTree = "<group>"; };
+		E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringConciseKitSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +146,7 @@
 				E92CB3441296DCAC00BF1922 /* Support */,
 				E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */,
 				E965CFC112A18A5000416CDF /* ConciseKitSpec.m */,
+				E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 				E965CFC012A18A1E00416CDF /* CKAdditions.h */,
 				E965CEA512A1816600416CDF /* NSArray+ConciseKit.h */,
 				E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */,
+				E9692C1F12B4B45400520396 /* NSString+ConciseKit.h */,
+				E9692C2012B4B45400520396 /* NSString+ConciseKit.m */,
 			);
 			name = ConciseKit;
 			path = ..;
@@ -247,6 +255,8 @@
 				E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */,
 				E90DAB9D12A66B1D000A36AE /* Foo.m in Sources */,
 				E90DADE612A6A07A000A36AE /* CKMocks.m in Sources */,
+				E9692C2112B4B45400520396 /* NSString+ConciseKit.m in Sources */,
+				E9692C2612B4B4FF00520396 /* NSStringConciseKitSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

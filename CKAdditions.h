@@ -3,3 +3,4 @@
  * Licensed under the MIT License.
  */
 #import "NSArray+ConciseKit.h"
+#import "NSString+ConciseKit.h"

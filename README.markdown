@@ -78,6 +78,19 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 
         [array $push:foo] => [array addObject:foo] (+ returns self)
 
+### NSString
+
+        [string $append:@"foo"]  => [string stringByAppendString:@"foo"]
+        [string $prepend:@"foo"] => [NSString stringWithFormat:@"%@%@", @"foo", string]
+        [string $split:@","]     => [string componentsSeparatedByString:@","]
+
+### NSMutableString
+
+        [string $append_:@"foo"]     => [string appendString:@"foo"]           (+ returns self)
+        [string $prepend_:@"foo"]    => [string insertString:@"foo" atIndex:0] (+ returns self)
+        [string $insert:@"foo" at:1] => [string insertString:@"foo" atIndex:1] (+ returns self)
+        [string $set:@"foo"]         => [string setString:@"foo"]              (+ returns self)
+
 ## License
 
 Copyright (c) 2010 Peter Jihoon Kim. This code is licensed under the MIT License.
