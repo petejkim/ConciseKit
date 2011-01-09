@@ -108,6 +108,14 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 
         [array $push:foo] => [array addObject:foo] (+ returns self)
 
+### NSDictionary
+
+        [dict $for:@"foo"] => [dict objectForKey:@"foo"]
+
+### NSMutableDictionary
+
+        [dict $obj:@"bar" for:@"foo"] => [dict setObject:@"bar" forKey:@"foo"] (+ returns self)
+
 ### NSString
 
         [string $append:@"foo"]  => [string stringByAppendString:@"foo"]

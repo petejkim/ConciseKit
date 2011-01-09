@@ -14,7 +14,7 @@ DESCRIBE(NSArrayConciseKit) {
     });
 
     describe(@"$arr", ^{
-      it(@"creates array", ^{
+      it(@"creates an array", ^{
         assertThat($arr(@"foo", @"bar", @"baz"), equalTo(array));
       });
     });
@@ -32,7 +32,7 @@ DESCRIBE(NSArrayConciseKit) {
     });
 
     describe(@"-$at:", ^{
-      it(@"returns the object at given index", ^{
+      it(@"returns the object at the given index", ^{
         assertThat([array $at:1], equalTo(@"bar"));
       });
     });
@@ -110,7 +110,7 @@ DESCRIBE(NSArrayConciseKit) {
     });
 
     describe(@"$marr", ^{
-      it(@"creates mutable array", ^{
+      it(@"creates a mutable array", ^{
         NSMutableArray *marr = $marr(@"foo", @"bar", @"baz");
         assertThat(marr, equalTo(marray));
         [marr addObject:@"lol"];

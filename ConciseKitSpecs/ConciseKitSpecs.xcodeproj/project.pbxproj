@@ -17,6 +17,8 @@
 		E91C43C412985E7D001522E5 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4EC1296DF2B00BF1922 /* Cedar.framework */; };
 		E91C43C512985E7D001522E5 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */; };
 		E91C43C612985E7D001522E5 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
+		E925015312D92D890018D373 /* NSDictionary+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E925015212D92D890018D373 /* NSDictionary+ConciseKit.m */; };
+		E925015812D92E250018D373 /* NSDictionaryConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */; };
 		E965CE8C12A17FC400416CDF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8A12A17FC400416CDF /* LICENSE */; };
 		E965CE8D12A17FC400416CDF /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8B12A17FC400416CDF /* README.markdown */; };
 		E965CE9412A1805800416CDF /* NSArrayConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */; };
@@ -59,6 +61,9 @@
 		E91C435D12985BD9001522E5 /* Specs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Specs.xib; sourceTree = "<group>"; };
 		E91C436912985C8A001522E5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E91C437B12985DDD001522E5 /* ConciseKitSpecs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConciseKitSpecs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E925015112D92D890018D373 /* NSDictionary+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ConciseKit.h"; sourceTree = "<group>"; };
+		E925015212D92D890018D373 /* NSDictionary+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConciseKit.m"; sourceTree = "<group>"; };
+		E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryConciseKitSpec.m; sourceTree = "<group>"; };
 		E92CB4EC1296DF2B00BF1922 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cedar.framework; sourceTree = "<group>"; };
 		E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrest.framework; sourceTree = "<group>"; };
 		E92CB4F01296DF2B00BF1922 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 				E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */,
 				E965CFC112A18A5000416CDF /* ConciseKitSpec.m */,
 				E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */,
+				E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */,
 				E9692C1F12B4B45400520396 /* NSString+ConciseKit.h */,
 				E9692C2012B4B45400520396 /* NSString+ConciseKit.m */,
+				E925015112D92D890018D373 /* NSDictionary+ConciseKit.h */,
+				E925015212D92D890018D373 /* NSDictionary+ConciseKit.m */,
 			);
 			name = ConciseKit;
 			path = ..;
@@ -257,6 +265,8 @@
 				E90DADE612A6A07A000A36AE /* CKMocks.m in Sources */,
 				E9692C2112B4B45400520396 /* NSString+ConciseKit.m in Sources */,
 				E9692C2612B4B4FF00520396 /* NSStringConciseKitSpec.m in Sources */,
+				E925015312D92D890018D373 /* NSDictionary+ConciseKit.m in Sources */,
+				E925015812D92E250018D373 /* NSDictionaryConciseKitSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
