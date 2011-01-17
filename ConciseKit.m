@@ -23,6 +23,10 @@
   return [[NSBundle mainBundle] bundlePath];
 }
 
++ (NSString *)resourcePath {
+  return [[NSBundle mainBundle] resourcePath];
+}
+
 + (BOOL)swizzleMethod:(SEL)originalSelector with:(SEL)anotherSelector in:(Class)klass {
   return [self swizzleMethod:originalSelector in:klass with:anotherSelector in:klass];
 }

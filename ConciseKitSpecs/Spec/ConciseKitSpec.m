@@ -32,6 +32,12 @@ DESCRIBE($) {
         assertThat([$ appPath], endsWith(@"ConciseKitSpecs.app"));
       });
     });
+
+    describe(@"+resourcePath", ^{
+      it(@"returns the app's directory", ^{
+        assertThat([$ resourcePath], endsWith(@"ConciseKitSpecs.app/Contents/Resources"));
+      });
+    });
   });
 
   describe(@"method swizzling", ^{

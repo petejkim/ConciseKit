@@ -12,6 +12,7 @@
 + (NSString *)desktopPath;
 + (NSString *)documentPath;
 + (NSString *)appPath;
++ (NSString *)resourcePath;
 
 + (BOOL)swizzleMethod:(SEL)originalSelector with:(SEL)anotherSelector in:(Class)klass;
 + (BOOL)swizzleMethod:(SEL)originalSelector in:(Class)klass with:(SEL)anotherSelector in:(Class)anotherKlass;
