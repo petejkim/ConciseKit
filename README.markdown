@@ -1,4 +1,4 @@
-# ConciseKit 0.0.1 - under heavy development
+# ConciseKit 0.0.1
 
 A set of Objective-C additions and macros that lets you to write code more quickly.
 
@@ -18,6 +18,7 @@ A set of Objective-C additions and macros that lets you to write code more quick
         [$ desktopPath]  => path to user's desktop directory
         [$ documentPath] => path to user's document directory
         [$ appPath]      => path to app directory
+        [$ resourcePath] => path to app's resources directory
 
 ### waitUntil
 
@@ -33,6 +34,7 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 
         $new(Foo)       => [[[Foo alloc] init] autorelease]
         $eql(foo, bar)  => [foo isEqual:bar]
+        $safe(obj)      => (obj == [NSNull null] ? nil : obj)
 
 ### NSArray shorthands
 

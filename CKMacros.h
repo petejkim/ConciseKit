@@ -36,3 +36,5 @@
 #define $range(val)       [NSValue valueWithRange:(val)]
 #define $rect(val)        [NSValue valueWithRect:(val)]
 #define $size(val)        [NSValue valueWithSize:(val)]
+
+#define $safe(obj)        (obj == [NSNull null] ? nil : obj)

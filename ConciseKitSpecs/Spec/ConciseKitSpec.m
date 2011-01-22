@@ -180,5 +180,10 @@ DESCRIBE($) {
       });
     });
   });
+
+  describe(@"$safe", ^{
+    NSNull *n = [NSNull null];
+    assertThat($safe(n), nilValue());
+  });
 }
 DESCRIBE_END
