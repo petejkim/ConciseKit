@@ -184,6 +184,8 @@ DESCRIBE($) {
   describe(@"$safe", ^{
     NSNull *n = [NSNull null];
     assertThat($safe(n), nilValue());
+    NSString *foo = @"foo";
+    assertThat($safe(foo), equalTo(@"foo"));
   });
 }
 DESCRIBE_END

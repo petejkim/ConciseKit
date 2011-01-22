@@ -37,4 +37,4 @@
 #define $rect(val)        [NSValue valueWithRect:(val)]
 #define $size(val)        [NSValue valueWithSize:(val)]
 
-#define $safe(obj)        (obj == [NSNull null] ? nil : obj)
+#define $safe(obj)        ((NSNull *)obj == [NSNull null] ? nil : obj)
