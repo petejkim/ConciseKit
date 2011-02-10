@@ -28,6 +28,31 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [$ waitUntil:^{ return (BOOL)(someConditionIsMet == YES) } timeOut:10.0]
         [$ waitUntil:^{ return (BOOL)(someConditionIsMet == YES) } timeOut:10.0 interval:0.1]
 
+## Singleton
+
+### Creating Singletons
+
+        @interface Foo
+        - (id)initSingleton; // <= add these to the interface
+        + (Foo *)sharedFoo;  // <= where Foo is the class name
+        @end
+
+        @implementation Foo
+        $singleton(Foo);     // => makes Foo a singleton class
+
+        - (id)initSingleton {
+          foo = 1;           // do initialization in -initSingleton method
+          bar = 2;
+          return self;
+        }
+        @end
+
+### Using Singletons
+
+        $shared(Foo)         // => returns the shared instance
+        /* or */
+        [Foo sharedFoo]
+
 ## Macros
 
 ### General shorthands

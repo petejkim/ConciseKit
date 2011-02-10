@@ -56,6 +56,7 @@
 		E90DAB9C12A66B1D000A36AE /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		E90DADE412A6A07A000A36AE /* CKMocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMocks.h; sourceTree = "<group>"; };
 		E90DADE512A6A07A000A36AE /* CKMocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMocks.m; sourceTree = "<group>"; };
+		E90F45F1130431E4008EA62A /* CKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSingleton.h; sourceTree = "<group>"; };
 		E91C433212985A68001522E5 /* ConciseKitSpecsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpecsAppDelegate.m; sourceTree = "<group>"; };
 		E91C435B12985B77001522E5 /* ConciseKitSpecs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConciseKitSpecs-Info.plist"; sourceTree = "<group>"; };
 		E91C435D12985BD9001522E5 /* Specs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Specs.xib; sourceTree = "<group>"; };
@@ -180,6 +181,7 @@
 				E965CFB912A1893100416CDF /* ConciseKit.m */,
 				E965CE8812A17FC400416CDF /* CKMacros.h */,
 				E965CFC012A18A1E00416CDF /* CKAdditions.h */,
+				E90F45F1130431E4008EA62A /* CKSingleton.h */,
 				E965CEA512A1816600416CDF /* NSArray+ConciseKit.h */,
 				E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */,
 				E9692C1F12B4B45400520396 /* NSString+ConciseKit.h */,

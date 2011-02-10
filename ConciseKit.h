@@ -5,6 +5,7 @@
 #import <Foundation/Foundation.h>
 #import "CKMacros.h"
 #import "CKAdditions.h"
+#import "CKSingleton.h"
 
 @interface ConciseKit : NSObject {}
 
