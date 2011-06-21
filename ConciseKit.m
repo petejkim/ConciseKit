@@ -3,7 +3,7 @@
  * Licensed under the MIT License.
  */
 #import "ConciseKit.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 @implementation ConciseKit
 
