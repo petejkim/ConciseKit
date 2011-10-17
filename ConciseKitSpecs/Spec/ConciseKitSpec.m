@@ -7,6 +7,12 @@
 #import "Foo.h"
 #import "CKMocks.h"
 
+#if __has_feature(objc_arc)
+    #define ARCLESS(block)
+#else
+    #define ARCLESS(block) block
+#endif
+
 DESCRIBE($) {
   describe(@"path", ^{
     describe(@"+homePath", ^{
@@ -52,7 +58,7 @@ DESCRIBE($) {
         [$ swizzleMethod:@selector(foo) with:@selector(bar) in:[Foo class]];
         assertThat([foo foo], equalTo(@"-foo"));
         assertThat([foo bar], equalTo(@"-bar"));
-        [foo release];
+        ARCLESS([foo release]);
       });
 
       context(@"swizzling inherited methods", ^{
@@ -70,8 +76,8 @@ DESCRIBE($) {
           assertThat([foo foo],    equalTo(@"-foo"));
           assertThat([subFoo foo], equalTo(@"-foo"));
           assertThat([subFoo bar], equalTo(@"-SubFoo::bar"));
-          [foo release];
-          [subFoo release];
+          ARCLESS([foo release]);
+          ARCLESS([subFoo release]);
         });
       });
     });
@@ -88,8 +94,8 @@ DESCRIBE($) {
         [$ swizzleMethod:@selector(foo) in:[Foo class] with:@selector(bar) in:[Bar class]];
         assertThat([foo foo], equalTo(@"-foo"));
         assertThat([bar bar], equalTo(@"-Bar::bar"));
-        [foo release];
-        [bar release];
+        ARCLESS([foo release]);
+        ARCLESS([bar release]);
       });
     });
 

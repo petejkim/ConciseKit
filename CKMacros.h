@@ -2,7 +2,16 @@
  * Copyright 2010 Peter Jihoon Kim
  * Licensed under the MIT License.
  */
-#define $new(Klass) [[[Klass alloc] init] autorelease]
+#ifndef __has_feature
+    #define __has_feature(x) 0
+#endif
+#if __has_feature(objc_arc)
+    #define IF_ARC(with, without) with
+#else
+    #define IF_ARC(with, without) without
+#endif
+
+#define $new(Klass) IF_ARC([[Klass alloc] init], [[[Klass alloc] init] autorelease])
 #define $eql(a,b)   [(a) isEqual:(b)]
 
 #define $arr(...)   [NSArray arrayWithObjects:__VA_ARGS__, nil]
