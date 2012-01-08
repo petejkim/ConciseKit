@@ -1,7 +1,3 @@
-/* ConciseKit
- * Copyright 2010 Peter Jihoon Kim
- * Licensed under the MIT License.
- */
 #import "SpecHelper.h"
 #import "ConciseKit.h"
 #import "Foo.h"

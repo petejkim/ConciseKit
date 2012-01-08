@@ -1,6 +1,8 @@
-# ConciseKit 0.0.1
+# ConciseKit
 
 A set of Objective-C additions and macros that lets you to write code more quickly.
+
+## Pull requests are welcome!
 
 ## $ class
 
@@ -156,6 +158,10 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [string $insert:@"foo" at:1] => [string insertString:@"foo" atIndex:1] (+ returns self)
         [string $set:@"foo"]         => [string setString:@"foo"]              (+ returns self)
 
+## Contributors
+
+* [nolanw](http://github.com/nolanw)
+
 ## License
 
-Copyright (c) 2010 Peter Jihoon Kim. This code is licensed under the MIT License.
+Copyright (c) 2010-2012 Peter Jihoon Kim. This code is licensed under the [MIT License](http://github.com/petejkim/ConciseKit/raw/master/LICENSE).

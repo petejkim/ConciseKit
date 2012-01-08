@@ -1,7 +1,3 @@
-/* ConciseKit
- * Copyright 2010 Peter Jihoon Kim
- * Licensed under the MIT License.
- */
 #define $shared(Klass) [Klass shared##Klass]
 
 #ifdef ALLOW_ALLOC_INIT_FOR_SINGLETONS

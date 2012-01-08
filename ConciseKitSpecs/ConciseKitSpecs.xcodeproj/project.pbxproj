@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,16 +17,15 @@
 		E91C43C412985E7D001522E5 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4EC1296DF2B00BF1922 /* Cedar.framework */; };
 		E91C43C512985E7D001522E5 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */; };
 		E91C43C612985E7D001522E5 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
-		E925015312D92D890018D373 /* NSDictionary+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E925015212D92D890018D373 /* NSDictionary+ConciseKit.m */; };
 		E925015812D92E250018D373 /* NSDictionaryConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */; };
 		E965CE8C12A17FC400416CDF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8A12A17FC400416CDF /* LICENSE */; };
-		E965CE8D12A17FC400416CDF /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8B12A17FC400416CDF /* README.markdown */; };
 		E965CE9412A1805800416CDF /* NSArrayConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */; };
-		E965CEA712A1816600416CDF /* NSArray+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */; };
-		E965CFBA12A1893100416CDF /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFB912A1893100416CDF /* ConciseKit.m */; };
 		E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFC112A18A5000416CDF /* ConciseKitSpec.m */; };
-		E9692C2112B4B45400520396 /* NSString+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E9692C2012B4B45400520396 /* NSString+ConciseKit.m */; };
 		E9692C2612B4B4FF00520396 /* NSStringConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */; };
+		E9B778E414BA583600D8DC76 /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B778DD14BA583600D8DC76 /* ConciseKit.m */; };
+		E9B778E514BA583600D8DC76 /* NSArray+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B778DF14BA583600D8DC76 /* NSArray+ConciseKit.m */; };
+		E9B778E614BA583600D8DC76 /* NSDictionary+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B778E114BA583600D8DC76 /* NSDictionary+ConciseKit.m */; };
+		E9B778E714BA583600D8DC76 /* NSString+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B778E314BA583600D8DC76 /* NSString+ConciseKit.m */; };
 		E9E4CF061298753B0093F83D /* Cedar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4EC1296DF2B00BF1922 /* Cedar.framework */; };
 		E9E4CF071298753B0093F83D /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */; };
 		E9E4CF081298753B0093F83D /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
@@ -56,14 +55,11 @@
 		E90DAB9C12A66B1D000A36AE /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		E90DADE412A6A07A000A36AE /* CKMocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMocks.h; sourceTree = "<group>"; };
 		E90DADE512A6A07A000A36AE /* CKMocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKMocks.m; sourceTree = "<group>"; };
-		E90F45F1130431E4008EA62A /* CKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSingleton.h; sourceTree = "<group>"; };
 		E91C433212985A68001522E5 /* ConciseKitSpecsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpecsAppDelegate.m; sourceTree = "<group>"; };
 		E91C435B12985B77001522E5 /* ConciseKitSpecs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConciseKitSpecs-Info.plist"; sourceTree = "<group>"; };
 		E91C435D12985BD9001522E5 /* Specs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Specs.xib; sourceTree = "<group>"; };
 		E91C436912985C8A001522E5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E91C437B12985DDD001522E5 /* ConciseKitSpecs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConciseKitSpecs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E925015112D92D890018D373 /* NSDictionary+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ConciseKit.h"; sourceTree = "<group>"; };
-		E925015212D92D890018D373 /* NSDictionary+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConciseKit.m"; sourceTree = "<group>"; };
 		E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryConciseKitSpec.m; sourceTree = "<group>"; };
 		E92CB4EC1296DF2B00BF1922 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cedar.framework; sourceTree = "<group>"; };
 		E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrest.framework; sourceTree = "<group>"; };
@@ -71,19 +67,22 @@
 		E92CB55C1296E0E600BF1922 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 		E92CB57E1296E1D800BF1922 /* CedarAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CedarAdditions.h; sourceTree = "<group>"; };
 		E92CB57F1296E1D800BF1922 /* CedarAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CedarAdditions.m; sourceTree = "<group>"; };
-		E965CE8812A17FC400416CDF /* CKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMacros.h; sourceTree = "<group>"; };
-		E965CE8912A17FC400416CDF /* ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciseKit.h; sourceTree = "<group>"; };
-		E965CE8A12A17FC400416CDF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		E965CE8B12A17FC400416CDF /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		E965CE8A12A17FC400416CDF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayConciseKitSpec.m; sourceTree = "<group>"; };
-		E965CEA512A1816600416CDF /* NSArray+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ConciseKit.h"; sourceTree = "<group>"; };
-		E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ConciseKit.m"; sourceTree = "<group>"; };
-		E965CFB912A1893100416CDF /* ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKit.m; sourceTree = "<group>"; };
-		E965CFC012A18A1E00416CDF /* CKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAdditions.h; sourceTree = "<group>"; };
 		E965CFC112A18A5000416CDF /* ConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpec.m; sourceTree = "<group>"; };
-		E9692C1F12B4B45400520396 /* NSString+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ConciseKit.h"; sourceTree = "<group>"; };
-		E9692C2012B4B45400520396 /* NSString+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ConciseKit.m"; sourceTree = "<group>"; };
 		E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringConciseKitSpec.m; sourceTree = "<group>"; };
+		E9B778D914BA583600D8DC76 /* CKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAdditions.h; sourceTree = "<group>"; };
+		E9B778DA14BA583600D8DC76 /* CKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMacros.h; sourceTree = "<group>"; };
+		E9B778DB14BA583600D8DC76 /* CKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSingleton.h; sourceTree = "<group>"; };
+		E9B778DC14BA583600D8DC76 /* ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConciseKit.h; sourceTree = "<group>"; };
+		E9B778DD14BA583600D8DC76 /* ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKit.m; sourceTree = "<group>"; };
+		E9B778DE14BA583600D8DC76 /* NSArray+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ConciseKit.h"; sourceTree = "<group>"; };
+		E9B778DF14BA583600D8DC76 /* NSArray+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ConciseKit.m"; sourceTree = "<group>"; };
+		E9B778E014BA583600D8DC76 /* NSDictionary+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ConciseKit.h"; sourceTree = "<group>"; };
+		E9B778E114BA583600D8DC76 /* NSDictionary+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConciseKit.m"; sourceTree = "<group>"; };
+		E9B778E214BA583600D8DC76 /* NSString+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ConciseKit.h"; sourceTree = "<group>"; };
+		E9B778E314BA583600D8DC76 /* NSString+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ConciseKit.m"; sourceTree = "<group>"; };
+		E9B778E814BA586F00D8DC76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +111,9 @@
 		29B97314FDCFA39411CA2CEA /* ConciseKit */ = {
 			isa = PBXGroup;
 			children = (
-				E965CE8712A17F9300416CDF /* ConciseKit */,
+				E9B778E814BA586F00D8DC76 /* README.md */,
+				E965CE8A12A17FC400416CDF /* LICENSE */,
+				E9B778D814BA583500D8DC76 /* src */,
 				E92CB3401296DC6100BF1922 /* Spec */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -172,26 +173,23 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		E965CE8712A17F9300416CDF /* ConciseKit */ = {
+		E9B778D814BA583500D8DC76 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E965CE8B12A17FC400416CDF /* README.markdown */,
-				E965CE8A12A17FC400416CDF /* LICENSE */,
-				E965CE8912A17FC400416CDF /* ConciseKit.h */,
-				E965CFB912A1893100416CDF /* ConciseKit.m */,
-				E965CE8812A17FC400416CDF /* CKMacros.h */,
-				E965CFC012A18A1E00416CDF /* CKAdditions.h */,
-				E90F45F1130431E4008EA62A /* CKSingleton.h */,
-				E965CEA512A1816600416CDF /* NSArray+ConciseKit.h */,
-				E965CEA612A1816600416CDF /* NSArray+ConciseKit.m */,
-				E9692C1F12B4B45400520396 /* NSString+ConciseKit.h */,
-				E9692C2012B4B45400520396 /* NSString+ConciseKit.m */,
-				E925015112D92D890018D373 /* NSDictionary+ConciseKit.h */,
-				E925015212D92D890018D373 /* NSDictionary+ConciseKit.m */,
+				E9B778D914BA583600D8DC76 /* CKAdditions.h */,
+				E9B778DA14BA583600D8DC76 /* CKMacros.h */,
+				E9B778DB14BA583600D8DC76 /* CKSingleton.h */,
+				E9B778DC14BA583600D8DC76 /* ConciseKit.h */,
+				E9B778DD14BA583600D8DC76 /* ConciseKit.m */,
+				E9B778DE14BA583600D8DC76 /* NSArray+ConciseKit.h */,
+				E9B778DF14BA583600D8DC76 /* NSArray+ConciseKit.m */,
+				E9B778E014BA583600D8DC76 /* NSDictionary+ConciseKit.h */,
+				E9B778E114BA583600D8DC76 /* NSDictionary+ConciseKit.m */,
+				E9B778E214BA583600D8DC76 /* NSString+ConciseKit.h */,
+				E9B778E314BA583600D8DC76 /* NSString+ConciseKit.m */,
 			);
-			name = ConciseKit;
-			path = ..;
-			sourceTree = SOURCE_ROOT;
+			path = src;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -219,8 +217,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ConciseKitSpecs" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -245,7 +246,6 @@
 			files = (
 				E91C438512985E5A001522E5 /* Specs.xib in Resources */,
 				E965CE8C12A17FC400416CDF /* LICENSE in Resources */,
-				E965CE8D12A17FC400416CDF /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,15 +260,15 @@
 				E91C438212985E4F001522E5 /* main.m in Sources */,
 				E91C438312985E4F001522E5 /* ConciseKitSpecsAppDelegate.m in Sources */,
 				E965CE9412A1805800416CDF /* NSArrayConciseKitSpec.m in Sources */,
-				E965CEA712A1816600416CDF /* NSArray+ConciseKit.m in Sources */,
-				E965CFBA12A1893100416CDF /* ConciseKit.m in Sources */,
 				E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */,
 				E90DAB9D12A66B1D000A36AE /* Foo.m in Sources */,
 				E90DADE612A6A07A000A36AE /* CKMocks.m in Sources */,
-				E9692C2112B4B45400520396 /* NSString+ConciseKit.m in Sources */,
 				E9692C2612B4B4FF00520396 /* NSStringConciseKitSpec.m in Sources */,
-				E925015312D92D890018D373 /* NSDictionary+ConciseKit.m in Sources */,
 				E925015812D92E250018D373 /* NSDictionaryConciseKitSpec.m in Sources */,
+				E9B778E414BA583600D8DC76 /* ConciseKit.m in Sources */,
+				E9B778E514BA583600D8DC76 /* NSArray+ConciseKit.m in Sources */,
+				E9B778E614BA583600D8DC76 /* NSDictionary+ConciseKit.m in Sources */,
+				E9B778E714BA583600D8DC76 /* NSString+ConciseKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +286,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -300,7 +299,6 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -316,14 +314,12 @@
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "Spec/Support/ConciseKitSpecs-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PREBINDING = NO;
 				PRODUCT_NAME = ConciseKitSpecs;
 			};
 			name = Debug;
@@ -339,13 +335,11 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "Spec/Support/ConciseKitSpecs-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PREBINDING = NO;
 				PRODUCT_NAME = ConciseKitSpecs;
 				ZERO_LINK = NO;
 			};

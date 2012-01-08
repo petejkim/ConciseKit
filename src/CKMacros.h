@@ -1,7 +1,3 @@
-/* ConciseKit
- * Copyright 2010 Peter Jihoon Kim
- * Licensed under the MIT License.
- */
 #ifndef __has_feature
     #define __has_feature(x) 0
 #endif

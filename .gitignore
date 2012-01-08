@@ -1,8 +1,9 @@
 .DS_Store
-*/build/
-*.mode1v3
-*.mode2v3
+*.xcworkspace
+xcuserdata
+.idea
+build/
 *.pbxuser
-*.perspectivev3
-*.swp
-*~.nib
+*.mode1v3
+products/*
+
