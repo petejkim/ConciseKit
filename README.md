@@ -6,6 +6,14 @@ A set of Objective-C additions and macros that lets you to write code more quick
 
 ## USAGE
 
+Use [CocoaPods](https://github.com/CocoaPods/CocoaPods)
+
+```ruby
+dependency 'ConciseKit', '~> 0.1.0'
+```
+
+or
+
 1. Copy files under `src/` to your project.
 
 ```objective-c
