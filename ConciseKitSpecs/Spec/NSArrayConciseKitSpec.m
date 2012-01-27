@@ -96,6 +96,24 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat(array, equalTo($arr($integer(2), $integer(5), $integer(8))));
       });
     });
+
+    describe(@"-$reduce:", ^{
+      it(@"runs a block for each item, passing in a memoized value and the item, reassigning the memoized value from the return value of each iteration, finally returning the last return value", ^{
+        NSNumber *result = [$arr($integer(1), $integer(2), $integer(3), $integer(4)) $reduce:^(NSNumber *memo, NSNumber *obj) {
+          return $integer([memo integerValue] + [obj integerValue]);
+        }];
+        assertThat(result, equalTo($integer(10)));
+      });
+    });
+
+    describe(@"-$reduceStartingAt:with:", ^{
+      it(@"performs a reduce function with a starting value", ^{
+        NSNumber *result = [$arr($integer(10), $integer(2), $integer(3)) $reduceStartingAt:$integer(1) with:^(NSNumber *memo, NSNumber *obj) {
+          return $integer([memo integerValue] * [obj integerValue]);
+        }];
+        assertThat(result, equalTo($integer(60)));
+      });
+    });
   });
 
   describe(@"NSMutableArray (ConciseKit)", ^{

@@ -58,6 +58,26 @@
   return array;
 }
 
+- (id)$reduce:(id (^)(id memo, id obj))block {
+  __block id ret = nil;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if (idx == 0) {
+      ret = obj;
+    } else {
+      ret = block(ret, obj);
+    }
+  }];
+  return ret;
+}
+
+- (id)$reduceStartingAt:(id)starting with:(id (^)(id memo, id obj))block {
+  __block id ret = starting;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    ret = block(ret, obj);
+  }];
+  return ret;
+}
+
 @end
 
 @implementation NSMutableArray (ConciseKit)
