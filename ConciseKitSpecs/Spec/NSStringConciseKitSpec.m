@@ -27,9 +27,15 @@ DESCRIBE(NSStringConciseKit) {
       });
     });
 
-    describe(@"-$split", ^{
+    describe(@"-$split:", ^{
       it(@"divides string into an array of strings by a given string", ^{
         assertThat([@"f,o,o" $split:@","], equalTo($arr(@"f",@"o",@"o")));
+      });
+    });
+
+    describe(@"-$split", ^{
+      it(@"divides string into an array of strings using whitespace", ^{
+        assertThat([@"ab cd ef" $split], equalTo($arr(@"ab",@"cd",@"ef")));
       });
     });
   });
