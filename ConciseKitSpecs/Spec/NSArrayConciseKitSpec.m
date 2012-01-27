@@ -132,6 +132,18 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat(result, equalTo($integer(1)));
       });
     });
+
+    describe(@"-$join", ^{
+      it(@"joins the strings in the array without a separator, (more concise than componentsJoinedByString)", ^{
+        assertThat([$arr(@"a", @"b", @"c") $join], equalTo(@"abc"));
+      });
+    });
+
+    describe(@"-$join:", ^{
+      it(@"joins the strings in the array with the supplied separator, (more concise than componentsJoinedByString)", ^{
+        assertThat([$arr(@"a", @"b", @"c") $join:@"-"], equalTo(@"a-b-c"));
+      });
+    });
   });
 
   describe(@"NSMutableArray (ConciseKit)", ^{

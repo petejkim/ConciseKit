@@ -99,6 +99,14 @@
   return ret;
 }
 
+- (NSString *)$join {
+  return [self componentsJoinedByString:@""];
+}
+
+- (NSString *)$join:(NSString *)separator {
+  return [self componentsJoinedByString:separator];
+}
+
 @end
 
 @implementation NSMutableArray (ConciseKit)
