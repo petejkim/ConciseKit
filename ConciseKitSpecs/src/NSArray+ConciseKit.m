@@ -78,6 +78,16 @@
   return ret;
 }
 
+- (NSArray *)$select:(BOOL(^)(id obj))block {
+  __block NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if (block(obj)) {
+      [array addObject:obj];
+    }
+  }];
+  return [NSArray arrayWithArray:array];
+}
+
 @end
 
 @implementation NSMutableArray (ConciseKit)

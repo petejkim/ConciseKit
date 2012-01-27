@@ -114,6 +114,15 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat(result, equalTo($integer(60)));
       });
     });
+
+    describe(@"-$select:", ^{
+      it(@"creates a subarray from elements where the block returns YES", ^{
+        array = [$arr($integer(1), $integer(2), $integer(3), $integer(4)) $select:^BOOL(NSNumber *obj) {
+          return ([obj integerValue] % 2) == 0;
+        }];
+        assertThat(array, equalTo($arr($integer(2), $integer(4))));
+      });
+    });
   });
 
   describe(@"NSMutableArray (ConciseKit)", ^{

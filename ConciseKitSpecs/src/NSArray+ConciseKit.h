@@ -13,6 +13,7 @@
 - (NSArray *)$mapWithIndex:(id (^)(id obj, NSUInteger idx))block;
 - (id)$reduce:(id (^)(id memo, id obj))block;
 - (id)$reduceStartingAt:(id)starting with:(id (^)(id memo, id obj))block;
+- (NSArray *)$select:(BOOL(^)(id obj))block;
 
 @end
 
