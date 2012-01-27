@@ -88,6 +88,17 @@
   return [NSArray arrayWithArray:array];
 }
 
+- (id)$detect:(BOOL(^)(id obj))block {
+  __block id ret = nil;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if (block(obj)) {
+      *stop = YES;
+      ret = obj;
+    }
+  }];
+  return ret;
+}
+
 @end
 
 @implementation NSMutableArray (ConciseKit)

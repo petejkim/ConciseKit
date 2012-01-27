@@ -123,6 +123,15 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat(array, equalTo($arr($integer(2), $integer(4))));
       });
     });
+
+    describe(@"-$detect:", ^{
+      it(@"returns the first value for which the block returns YES", ^{
+        NSNumber *result = [$arr($integer(1), $integer(2), $integer(3)) $detect:^BOOL(NSNumber *obj) {
+          return ([obj integerValue] % 2) == 1;
+        }];
+        assertThat(result, equalTo($integer(1)));
+      });
+    });
   });
 
   describe(@"NSMutableArray (ConciseKit)", ^{
