@@ -5,6 +5,7 @@
 - (NSString *)$append:(NSString *)aString;
 - (NSString *)$prepend:(NSString *)aString;
 - (NSArray *)$split:(NSString *)aString;
+- (NSArray *)$split;
 
 @end
 
