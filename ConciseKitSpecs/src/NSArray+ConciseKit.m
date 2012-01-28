@@ -58,6 +58,55 @@
   return array;
 }
 
+- (id)$reduce:(id (^)(id memo, id obj))block {
+  __block id ret = nil;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if (idx == 0) {
+      ret = obj;
+    } else {
+      ret = block(ret, obj);
+    }
+  }];
+  return ret;
+}
+
+- (id)$reduceStartingAt:(id)starting with:(id (^)(id memo, id obj))block {
+  __block id ret = starting;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    ret = block(ret, obj);
+  }];
+  return ret;
+}
+
+- (NSArray *)$select:(BOOL(^)(id obj))block {
+  __block NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if (block(obj)) {
+      [array addObject:obj];
+    }
+  }];
+  return [NSArray arrayWithArray:array];
+}
+
+- (id)$detect:(BOOL(^)(id obj))block {
+  __block id ret = nil;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if (block(obj)) {
+      *stop = YES;
+      ret = obj;
+    }
+  }];
+  return ret;
+}
+
+- (NSString *)$join {
+  return [self componentsJoinedByString:@""];
+}
+
+- (NSString *)$join:(NSString *)separator {
+  return [self componentsJoinedByString:separator];
+}
+
 @end
 
 @implementation NSMutableArray (ConciseKit)
