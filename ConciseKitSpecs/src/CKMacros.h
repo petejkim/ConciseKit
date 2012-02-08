@@ -12,12 +12,16 @@
 
 #define $arr(...)   [NSArray arrayWithObjects:__VA_ARGS__, nil]
 #define $marr(...)  [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
+#define $marrnew    [NSMutableArray array]
 #define $set(...)   [NSSet setWithObjects:__VA_ARGS__, nil]
 #define $mset(...)  [NSMutableSet setWithObjects:__VA_ARGS__, nil]
+#define $msetnew    [NSMutableSet set]
 #define $dict(...)  [NSDictionary dictionaryWithObjectsAndKeys:__VA_ARGS__, nil]
 #define $mdict(...) [NSMutableDictionary dictionaryWithObjectsAndKeys:__VA_ARGS__, nil]
+#define $mdictnew   [NSMutableDictionary dictionary]
 #define $str(...)   [NSString stringWithFormat:__VA_ARGS__]
 #define $mstr(...)  [NSMutableString stringWithFormat:__VA_ARGS__]
+#define $mstrnew    [NSMutableString string]
 
 #define $bool(val)      [NSNumber numberWithBool:(val)]
 #define $char(val)      [NSNumber numberWithChar:(val)]

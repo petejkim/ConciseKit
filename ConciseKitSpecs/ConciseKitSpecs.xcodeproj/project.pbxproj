@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB6C70DD14E21B3A0016D5D7 /* NSSetConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6C70DC14E21B3A0016D5D7 /* NSSetConciseKitSpec.m */; };
 		E90DAB9D12A66B1D000A36AE /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90DAB9C12A66B1D000A36AE /* Foo.m */; };
 		E90DADE612A6A07A000A36AE /* CKMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = E90DADE512A6A07A000A36AE /* CKMocks.m */; };
 		E91C438112985E4F001522E5 /* CedarAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E92CB57F1296E1D800BF1922 /* CedarAdditions.m */; };
@@ -51,6 +52,7 @@
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		CB6C70DC14E21B3A0016D5D7 /* NSSetConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSetConciseKitSpec.m; sourceTree = "<group>"; };
 		E90DAB9B12A66B1D000A36AE /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		E90DAB9C12A66B1D000A36AE /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		E90DADE412A6A07A000A36AE /* CKMocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMocks.h; sourceTree = "<group>"; };
@@ -151,10 +153,11 @@
 			children = (
 				E90DAB9012A66AC3000A36AE /* Fixtures */,
 				E92CB3441296DCAC00BF1922 /* Support */,
-				E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */,
 				E965CFC112A18A5000416CDF /* ConciseKitSpec.m */,
-				E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */,
+				E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */,
+				CB6C70DC14E21B3A0016D5D7 /* NSSetConciseKitSpec.m */,
 				E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */,
+				E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				E9B778E514BA583600D8DC76 /* NSArray+ConciseKit.m in Sources */,
 				E9B778E614BA583600D8DC76 /* NSDictionary+ConciseKit.m in Sources */,
 				E9B778E714BA583600D8DC76 /* NSString+ConciseKit.m in Sources */,
+				CB6C70DD14E21B3A0016D5D7 /* NSSetConciseKitSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

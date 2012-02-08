@@ -67,21 +67,25 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 
         $arr(foo, bar)   =>  [NSArray arrayWithObjects:foo, bar, nil]
         $marr(foo, bar)  =>  [NSMutableArray ...]
+        $marrnew         =>  [NSMutableArray array]
 
 ### NSSet shorthands
 
         $set(foo, bar)   =>  [NSSet setWithObjects:foo, bar, nil]
         $mset(foo, bar)  =>  [NSMutableSet ...]
+        $msetnew         =>  [NSMutableSet set]
 
 ### NSDictionary shorthands
 
         $dict(v1, k1, v2, k2)  => [NSDictionary dictionaryWithObjectsAndKeys:v1, k1, v2, k2, nil]
         $mdict(v1, k1, v2, k2) => [NSMutableDictionary ...]
+        $mdictnew              => [NSMutableDictionary dictionary]
 
 ### NSString shorthands
 
         $str(@"foo: %@", bar)   => [NSString stringWithFormat:@"foo: %@", bar]
         $mstr(@"foo: %@", bar)  => [NSMutableString ...]
+        $mstrnew                => [NSMutableString string]
 
 ### NSNumber shorthands
 
@@ -132,14 +136,61 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [array $mapWithIndex:^(id obj, NSUInteger i) {
           return $integer([obj integerValue] * 2 + i);
         }]
+        
+        [array $reduce:^(id obj) {
+          return $integer([obj integerValue] * 2);
+        }]
+        
+        [array $reduce:^(NSNumber *memo, NSNumber *obj) {
+          return $integer([memo integerValue] + [obj integerValue]);
+        }]
+        
+        [array $reduceStartingAt:$integer(1) with:^(NSNumber *memo, NSNumber *obj) {
+          return $integer([memo integerValue] * [obj integerValue]);
+        }]
+        
+        [array $select:^BOOL(NSNumber *obj) {
+          return ([obj integerValue] % 2) == 0;
+        }]
+        
+        [array $detect:^BOOL(NSNumber *obj) {
+          return ([obj integerValue] % 2) == 1;
+        }]
+        
+        [array $join]      => [self componentsJoinedByString:@""]
+        [array $join:@","] => [self componentsJoinedByString:@","]
 
 ### NSMutableArray
 
-        [array $push:foo] => [array addObject:foo] (+ returns self)
+        [array $push:foo]    => [array addObject:foo]              (+ returns self)
+        [array $pop]         => [array removeLastObject]           (+ returns lastObject)
+        [array $unshift:foo] => [array insertObject:foo atIndex:0] (+ returns self)
+        [array $shift]       => [array removeObjectAtIndex:0]      (+ returns first object)
 
 ### NSDictionary
 
         [dict $for:@"foo"] => [dict objectForKey:@"foo"]
+        [dict $keys]       => [dict allKeys]
+        [dict $values]     => [dict allValues]
+        
+        [dict $each:^(id key, id value) {
+            NSLog(@"%@ => %@", key, value);
+        }
+        
+        [dict $eachWithStop:^(id key, id value, BOOL *stop) {
+            NSLog(@"%@ => %@", key, value);
+            if($eql(key, @"foo")) {
+                *stop = YES;
+            }
+        }]
+        
+        [dict $eachKey:^(id key) {
+            NSLog(@"%@", key);
+        }]
+        
+        [dict $eachValue:^(id value) {
+            NSLog(@"%@", value);
+        }]
 
 ### NSMutableDictionary
 
@@ -150,6 +201,7 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [string $append:@"foo"]  => [string stringByAppendString:@"foo"]
         [string $prepend:@"foo"] => [NSString stringWithFormat:@"%@%@", @"foo", string]
         [string $split:@","]     => [string componentsSeparatedByString:@","]
+        [string $split]          => [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
 
 ### NSMutableString
 
@@ -161,6 +213,8 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 ## Contributors
 
 * [nolanw](http://github.com/nolanw)
+* [listrophy](https://github.com/listrophy)
+* [gerry3](https://github.com/gerry3) @ [Inigral](https://github.com/inigral)
 
 ## License
 
