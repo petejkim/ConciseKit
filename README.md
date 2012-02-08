@@ -174,9 +174,7 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         }]
 
         [array $join]      => [self componentsJoinedByString:@""]
-        [array $join:@","] => [self componentsJoinedByString:@","]### NSMutableArray
-
-        [array $push:foo] => [array addObject:foo] (+ returns self)
+        [array $join:@","] => [self componentsJoinedByString:@","]
 
 ### NSMutableArray
 
