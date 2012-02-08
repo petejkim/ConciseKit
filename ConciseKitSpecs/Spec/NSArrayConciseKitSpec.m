@@ -155,10 +155,19 @@ DESCRIBE(NSArrayConciseKit) {
 
     describe(@"$marr", ^{
       it(@"creates a mutable array", ^{
-        NSMutableArray *marr = $marr(@"foo", @"bar", @"baz");
-        assertThat(marr, equalTo(marray));
-        [marr addObject:@"lol"];
-        assertThat(marr, equalTo([NSArray arrayWithObjects:@"foo", @"bar", @"baz", @"lol", nil]));
+        NSMutableArray *newArray = $marr(@"foo", @"bar", @"baz");
+        assertThat(newArray, equalTo(marray));
+        [newArray addObject:@"lol"];
+        assertThat(newArray, equalTo([NSArray arrayWithObjects:@"foo", @"bar", @"baz", @"lol", nil]));
+      });
+    });
+
+    describe(@"$marrnew", ^{
+      it(@"creates an empty mutable array", ^{
+          NSMutableArray *newArray = $marrnew;
+          assertThatInteger([newArray count], equalToInteger(0));
+          [newArray addObject:@"lol"];
+          assertThat(newArray, equalTo([NSArray arrayWithObject:@"lol"]));
       });
     });
 
@@ -170,6 +179,39 @@ DESCRIBE(NSArrayConciseKit) {
 
       it(@"returns self", ^{
         assertThat([marray $push:@"obj"], equalTo(marray));
+      });
+    });
+    
+    describe(@"-$pop", ^{
+      it(@"removes last object", ^{
+        [marray $pop];
+        assertThat([marray lastObject], equalTo(@"bar"));
+      });
+      
+      it(@"returns last object", ^{
+        assertThat([marray $pop], equalTo(@"baz"));
+      });
+    });
+      
+    describe(@"-$unshift:", ^{
+      it(@"adds first object", ^{
+        [marray $unshift:@"obj"];
+        assertThat([marray objectAtIndex:0], equalTo(@"obj"));
+      });
+          
+      it(@"returns self", ^{
+        assertThat([marray $unshift:@"obj"], equalTo(marray));
+      });
+    });
+      
+    describe(@"-$shift", ^{
+      it(@"removes first object", ^{
+        [marray $shift];
+        assertThat([marray objectAtIndex:0], equalTo(@"bar"));
+      });
+          
+      it(@"returns first object", ^{
+        assertThat([marray $shift], equalTo(@"foo"));
       });
     });
   });
