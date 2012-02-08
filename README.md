@@ -9,7 +9,7 @@ A set of Objective-C additions and macros that lets you to write code more quick
 Use [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
 ```ruby
-dependency 'ConciseKit', '~> 0.1.0'
+dependency 'ConciseKit', '~> 0.1.1'
 ```
 
 or
@@ -81,23 +81,27 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 
 ### NSArray shorthands
 
-        $arr(foo, bar)   =>  [NSArray arrayWithObjects:foo, bar, nil]
-        $marr(foo, bar)  =>  [NSMutableArray ...]
+        $arr(foo, bar)          =>  [NSArray arrayWithObjects:foo, bar, nil]
+        $marr(foo, bar)         =>  [NSMutableArray ...]
+        $marrnew or $marr(nil)  =>  [NSMutableArray array]
 
 ### NSSet shorthands
 
-        $set(foo, bar)   =>  [NSSet setWithObjects:foo, bar, nil]
-        $mset(foo, bar)  =>  [NSMutableSet ...]
+        $set(foo, bar)          =>  [NSSet setWithObjects:foo, bar, nil]
+        $mset(foo, bar)         =>  [NSMutableSet ...]
+        $msetnew or $mset(nil)  =>  [NSMutableSet set]
 
 ### NSDictionary shorthands
 
-        $dict(v1, k1, v2, k2)  => [NSDictionary dictionaryWithObjectsAndKeys:v1, k1, v2, k2, nil]
-        $mdict(v1, k1, v2, k2) => [NSMutableDictionary ...]
+        $dict(v1, k1, v2, k2)     =>  [NSDictionary dictionaryWithObjectsAndKeys:v1, k1, v2, k2, nil]
+        $mdict(v1, k1, v2, k2)    =>  [NSMutableDictionary ...]
+        $mdictnew or $mdict(nil)  =>  [NSMutableDictionary dictionary]
 
 ### NSString shorthands
 
         $str(@"foo: %@", bar)   => [NSString stringWithFormat:@"foo: %@", bar]
         $mstr(@"foo: %@", bar)  => [NSMutableString ...]
+        $mstrnew or $mstr(nil)  => [NSMutableString string]
 
 ### NSNumber shorthands
 
@@ -149,13 +153,62 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
           return $integer([obj integerValue] * 2 + i);
         }]
 
-### NSMutableArray
+        [array $reduce:^(id obj) {
+          return $integer([obj integerValue] * 2);
+        }]
+
+        [array $reduce:^(NSNumber *memo, NSNumber *obj) {
+          return $integer([memo integerValue] + [obj integerValue]);
+        }]
+
+        [array $reduceStartingAt:$integer(1) with:^(NSNumber *memo, NSNumber *obj) {
+          return $integer([memo integerValue] * [obj integerValue]);
+        }]
+
+        [array $select:^BOOL(NSNumber *obj) {
+          return ([obj integerValue] % 2) == 0;
+        }]
+
+        [array $detect:^BOOL(NSNumber *obj) {
+          return ([obj integerValue] % 2) == 1;
+        }]
+
+        [array $join]      => [self componentsJoinedByString:@""]
+        [array $join:@","] => [self componentsJoinedByString:@","]### NSMutableArray
 
         [array $push:foo] => [array addObject:foo] (+ returns self)
+
+### NSMutableArray
+
+        [array $push:foo]    => [array addObject:foo]              (+ returns self)
+        [array $pop]         => [array removeLastObject]           (+ returns lastObject)
+        [array $unshift:foo] => [array insertObject:foo atIndex:0] (+ returns self)
+        [array $shift]       => [array removeObjectAtIndex:0]      (+ returns first object)
 
 ### NSDictionary
 
         [dict $for:@"foo"] => [dict objectForKey:@"foo"]
+        [dict $keys]       => [dict allKeys]
+        [dict $values]     => [dict allValues]
+
+        [dict $each:^(id key, id value) {
+            NSLog(@"%@ => %@", key, value);
+        }
+
+        [dict $eachWithStop:^(id key, id value, BOOL *stop) {
+            NSLog(@"%@ => %@", key, value);
+            if($eql(key, @"foo")) {
+                *stop = YES;
+            }
+        }]
+
+        [dict $eachKey:^(id key) {
+            NSLog(@"%@", key);
+        }]
+
+        [dict $eachValue:^(id value) {
+            NSLog(@"%@", value);
+        }]
 
 ### NSMutableDictionary
 
@@ -166,6 +219,7 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [string $append:@"foo"]  => [string stringByAppendString:@"foo"]
         [string $prepend:@"foo"] => [NSString stringWithFormat:@"%@%@", @"foo", string]
         [string $split:@","]     => [string componentsSeparatedByString:@","]
+        [string $split]          => [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
 
 ### NSMutableString
 
@@ -177,7 +231,9 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 ## Contributors
 
 * [nolanw](http://github.com/nolanw)
+* [listrophy](https://github.com/listrophy)
+* [gerry3](https://github.com/gerry3) @ [Inigral](https://github.com/inigral)
 
 ## License
 
-Copyright (c) 2010-2012 Peter Jihoon Kim. This code is licensed under the [MIT License](http://github.com/petejkim/ConciseKit/raw/master/LICENSE).
+Copyright (c) 2010-2012 Peter Jihoon Kim and contributors. This code is licensed under the [MIT License](http://github.com/petejkim/ConciseKit/raw/master/LICENSE).
