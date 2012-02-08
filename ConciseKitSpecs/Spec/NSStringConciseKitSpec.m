@@ -56,6 +56,15 @@ DESCRIBE(NSStringConciseKit) {
       });
     });
 
+    describe(@"$mstrnew", ^{
+      it(@"creates an empty mutable string", ^{
+          NSMutableString *newString = $mstrnew;
+          assertThatInteger([newString length], equalToInteger(0));
+          [newString appendString:@"lol"];
+          assertThat(newString, equalTo(@"lol"));
+      });
+    });
+
     describe(@"-$append_", ^{
       it(@"appends another string and returns self", ^{
         assertThat([mstring $append_:@"bar"], equalTo(@"foobar"));
