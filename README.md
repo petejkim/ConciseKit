@@ -9,7 +9,7 @@ A set of Objective-C additions and macros that lets you to write code more quick
 Use [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
 ```ruby
-dependency 'ConciseKit', '~> 0.1.1'
+dependency 'ConciseKit', '~> 0.1.2'
 ```
 
 or

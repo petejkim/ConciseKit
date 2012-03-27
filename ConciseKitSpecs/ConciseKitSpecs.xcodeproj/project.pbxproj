@@ -19,6 +19,7 @@
 		E91C43C512985E7D001522E5 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4EE1296DF2B00BF1922 /* OCHamcrest.framework */; };
 		E91C43C612985E7D001522E5 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CB4F01296DF2B00BF1922 /* OCMock.framework */; };
 		E925015812D92E250018D373 /* NSDictionaryConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */; };
+		E953689A1521C7BA00AA3B81 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E95368991521C7BA00AA3B81 /* README.md */; };
 		E965CE8C12A17FC400416CDF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E965CE8A12A17FC400416CDF /* LICENSE */; };
 		E965CE9412A1805800416CDF /* NSArrayConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */; };
 		E965CFC212A18A5000416CDF /* ConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E965CFC112A18A5000416CDF /* ConciseKitSpec.m */; };
@@ -69,6 +70,7 @@
 		E92CB55C1296E0E600BF1922 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 		E92CB57E1296E1D800BF1922 /* CedarAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CedarAdditions.h; sourceTree = "<group>"; };
 		E92CB57F1296E1D800BF1922 /* CedarAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CedarAdditions.m; sourceTree = "<group>"; };
+		E95368991521C7BA00AA3B81 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E965CE8A12A17FC400416CDF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E965CE9312A1805800416CDF /* NSArrayConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayConciseKitSpec.m; sourceTree = "<group>"; };
 		E965CFC112A18A5000416CDF /* ConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConciseKitSpec.m; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 		E9B778E114BA583600D8DC76 /* NSDictionary+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConciseKit.m"; sourceTree = "<group>"; };
 		E9B778E214BA583600D8DC76 /* NSString+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ConciseKit.h"; sourceTree = "<group>"; };
 		E9B778E314BA583600D8DC76 /* NSString+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ConciseKit.m"; sourceTree = "<group>"; };
-		E9B778E814BA586F00D8DC76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +114,7 @@
 		29B97314FDCFA39411CA2CEA /* ConciseKit */ = {
 			isa = PBXGroup;
 			children = (
-				E9B778E814BA586F00D8DC76 /* README.md */,
+				E95368991521C7BA00AA3B81 /* README.md */,
 				E965CE8A12A17FC400416CDF /* LICENSE */,
 				E9B778D814BA583500D8DC76 /* src */,
 				E92CB3401296DC6100BF1922 /* Spec */,
@@ -249,6 +250,7 @@
 			files = (
 				E91C438512985E5A001522E5 /* Specs.xib in Resources */,
 				E965CE8C12A17FC400416CDF /* LICENSE in Resources */,
+				E953689A1521C7BA00AA3B81 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
