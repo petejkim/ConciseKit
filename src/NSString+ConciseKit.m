@@ -14,6 +14,10 @@
   return [self componentsSeparatedByString:aString];
 }
 
+- (NSArray *)$split {
+    return [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
 @end
 
 @implementation NSMutableString (ConciseKit)
