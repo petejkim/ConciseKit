@@ -2,6 +2,7 @@
 #import "CKMacros.h"
 #import "CKAdditions.h"
 #import "CKSingleton.h"
+#import "CKNotifications.h"
 
 @interface ConciseKit : NSObject {}
 
