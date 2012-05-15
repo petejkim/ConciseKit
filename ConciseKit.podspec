@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'ConciseKit'
-  s.version  = '0.1.2'
+  s.version  = '0.1.3'
   s.license  = 'MIT'
   s.summary  = 'A set of Objective-C additions and macros that lets you write code more quickly.'
   s.homepage = 'http://github.com/petejkim/ConciseKit'
