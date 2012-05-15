@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'http://github.com/petejkim/ConciseKit'
   s.author   = { 'Peter Jihoon Kim' => 'raingrove@gmail.com' }
 
-  s.source   = { :git => 'http://github.com/petejkim/ConciseKit.git', :tag => 'v0.1.2' }
+  s.source   = { :git => 'http://github.com/petejkim/ConciseKit.git', :tag => 'v0.1.3-gth' }
 
   s.source_files = 'src/**/*.{h,m}'
 
