@@ -98,6 +98,16 @@ DESCRIBE(NSStringConciseKit) {
         assertThat(mstring, equalTo(@"bar"));
       });
     });
+      
+    describe(@"-$chars", ^{
+      it(@"splits the string into characters", ^{
+        assertThat([@"abc" $chars], equalTo($arr(@"a", @"b", @"c")));
+      });
+        
+      it(@"returns an empty array for an empty string", ^{
+        assertThat([@"" $chars], equalTo($arr(nil)));
+      });
+    });
   });
 }
 DESCRIBE_END

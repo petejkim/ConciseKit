@@ -15,7 +15,16 @@
 }
 
 - (NSArray *)$split {
-    return [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  return [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSArray *)$chars {
+    NSMutableArray *array = [[[NSMutableArray alloc] init] autorelease];
+    for (int i=0; i < [self length]; i++) {
+        NSString *spot  = [NSString stringWithFormat:@"%c", [self characterAtIndex:i]];
+        [array addObject: spot];
+    }
+    return array;
 }
 
 - (NSString*)$trim {
