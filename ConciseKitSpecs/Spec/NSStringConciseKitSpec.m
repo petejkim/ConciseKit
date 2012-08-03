@@ -38,6 +38,13 @@ DESCRIBE(NSStringConciseKit) {
         assertThat([@"ab cd ef" $split], equalTo($arr(@"ab",@"cd",@"ef")));
       });
     });
+
+    describe(@"-$trim", ^{
+      it(@"removes leading and trailing whitespace", ^{
+          assertThat([@"\t \n foo \t \n " $trim], equalTo(@"foo"));
+      });
+    });
+
   });
 
   describe(@"NSMutableString (ConciseKit)", ^{
@@ -89,6 +96,16 @@ DESCRIBE(NSStringConciseKit) {
       it(@"sets the mutable string to be given string", ^{
         assertThat([mstring $set:@"bar"], equalTo(@"bar"));
         assertThat(mstring, equalTo(@"bar"));
+      });
+    });
+      
+    describe(@"-$chars", ^{
+      it(@"splits the string into characters", ^{
+        assertThat([@"abc" $chars], equalTo($arr(@"a", @"b", @"c")));
+      });
+        
+      it(@"returns an empty array for an empty string", ^{
+        assertThat([@"" $chars], equalTo($arr(nil)));
       });
     });
   });
