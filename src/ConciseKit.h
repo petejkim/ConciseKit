@@ -6,6 +6,7 @@
 @interface ConciseKit : NSObject {}
 
 + (NSString *)homePath;
++ (NSString *)libraryPath;
 + (NSString *)desktopPath;
 + (NSString *)documentPath;
 + (NSString *)appPath;

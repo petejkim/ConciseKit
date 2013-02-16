@@ -37,6 +37,7 @@ or
         [$ documentPath] => path to user's document directory
         [$ appPath]      => path to app directory
         [$ resourcePath] => path to app's resources directory
+        [$ libraryPath]     => path to app's library directory
 
 ### waitUntil
 
