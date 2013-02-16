@@ -2,6 +2,10 @@
 
 @implementation NSString (ConciseKit)
 
+- (NSString *)$appendPath:(NSString *)aString {
+    return [self stringByAppendingPathComponent:aString];
+}
+
 - (NSString *)$append:(NSString *)aString {
   return [self stringByAppendingString:aString];
 }

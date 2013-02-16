@@ -2,6 +2,7 @@
 
 @interface NSString (ConciseKit)
 
+- (NSString *)$appendPath:(NSString *)aString;
 - (NSString *)$append:(NSString *)aString;
 - (NSString *)$prepend:(NSString *)aString;
 - (NSArray *)$split:(NSString *)aString;
