@@ -14,6 +14,10 @@
     return [self allValues];
 }
 
+- (BOOL)$hasKey:(id)key {
+    return [[self $keys] containsObject:key];
+}
+
 - (NSDictionary *)$each:(void (^)(id key, id value))block {
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
         block(key, value);

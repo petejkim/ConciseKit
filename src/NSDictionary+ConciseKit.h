@@ -5,6 +5,8 @@
 - (id)$for:(id)aKey;
 - (NSArray *)$keys;
 - (NSArray *)$values;
+- (BOOL)$hasKey:(id)key;
+
 - (NSDictionary *)$each:(void (^)(id key, id value))block;
 - (NSDictionary *)$eachWithStop:(void (^)(id key, id value, BOOL *stop))block;
 - (NSDictionary *)$eachKey:(void (^)(id key))block;
