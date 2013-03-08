@@ -25,7 +25,7 @@ static NSMutableDictionary *dict;
   if([dict objectForKey:key] == nil) {
     [dict setObject:$marr(nil) forKey:key];
   }
-  [(NSMutableArray *)[dict objectForKey:key] $push:values];
+  [(NSMutableArray *)[dict objectForKey:key] push:values];
 }
 
 + (void)resetAll {
