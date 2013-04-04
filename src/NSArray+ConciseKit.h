@@ -4,6 +4,8 @@
 
 - (id)$first;
 - (id)$last;
+- (BOOL)$all:(BOOL (^)(id obj))block;
+- (BOOL)$any:(BOOL (^)(id obj))block;
 - (id)$at:(NSUInteger)index;
 - (NSArray *)$each:(void (^)(id obj))block;
 - (NSArray *)$eachWithIndex:(void (^)(id obj, NSUInteger idx))block;

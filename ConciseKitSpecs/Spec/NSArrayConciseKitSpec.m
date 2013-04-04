@@ -26,6 +26,42 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat([array $last], equalTo(@"baz"));
       });
     });
+      
+    describe(@"-$all", ^{
+      it(@"returns YES if all values of the array match the specification", ^{
+        BOOL allValues = [$arr(@"ant", @"bear", @"cat") $all:^BOOL(NSString *obj) {
+          return [obj length] >= 3;
+        }];
+          
+        assertThatBool(allValues, equalToBool(YES));
+      });
+      
+      it(@"returns NO if 1 or more values do not match the specification", ^{
+        BOOL allValues = [$arr(@"ant", @"bear", @"cat") $all:^BOOL(NSString *obj) {
+          return [obj length] >= 4;
+        }];
+        
+        assertThatBool(allValues, equalToBool(NO));
+      });
+    });
+    
+    describe(@"-$any", ^{
+      it(@"should return YES if one or more values match the specification", ^{
+        BOOL anyValues = [$arr(@"ant", @"bear", @"cat") $any:^BOOL(NSString *obj) {
+          return [obj length] >= 4;
+        }];
+        
+        assertThatBool(anyValues, equalToBool(YES));
+      });
+      
+      it(@"should return NO none of the values match the specification", ^{
+        BOOL anyValues = [$arr(@"ant", @"bear", @"cat") $any:^BOOL(NSString *obj) {
+          return [obj length] >= 5;
+        }];
+        
+        assertThatBool(anyValues, equalToBool(NO));
+      });
+    });
 
     describe(@"-$at:", ^{
       it(@"returns the object at the given index", ^{

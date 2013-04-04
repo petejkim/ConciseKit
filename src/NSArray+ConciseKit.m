@@ -10,6 +10,14 @@
   return [self lastObject];
 }
 
+- (BOOL)$all:(BOOL (^)(id))block {
+  return [self count] == [[self $select:block] count];
+}
+
+- (BOOL)$any:(BOOL (^)(id))block {
+  return [[self $select:block] count] > 0;
+}
+
 - (id)$at:(NSUInteger)index {
   return [self objectAtIndex:index];
 }
