@@ -7,6 +7,7 @@
 - (NSString *)prepend:(NSString *)aString;
 - (NSArray *)split:(NSString *)aString;
 - (NSArray *)split;
+- (NSString *)trim;
 
 @end
 
