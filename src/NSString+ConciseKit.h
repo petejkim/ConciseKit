@@ -8,6 +8,8 @@
 - (NSArray *)split:(NSString *)aString;
 - (NSArray *)split;
 - (NSString *)trim;
+- (BOOL)equals:(NSString*)string;
+- (BOOL)notEquals:(NSString*)string;
 
 @end
 

@@ -26,6 +26,14 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+- (BOOL)equals:(NSString*)string {
+    return [self isEqualToString:string];
+}
+
+- (BOOL)notEquals:(NSString*)string {
+    return ![self notEquals:string];
+}
+
 @end
 
 @implementation NSMutableString (ConciseKit)
