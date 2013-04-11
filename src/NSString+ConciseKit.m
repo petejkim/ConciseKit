@@ -31,7 +31,7 @@
 }
 
 - (BOOL)notEquals:(NSString*)string {
-    return ![self notEquals:string];
+    return ![self equals:string];
 }
 
 @end
