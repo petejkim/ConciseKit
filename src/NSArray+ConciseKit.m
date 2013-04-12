@@ -22,6 +22,12 @@
   return [self objectAtIndex:index];
 }
 
+- (NSArray *)$compact {
+    NSMutableArray *backingArray = [NSMutableArray arrayWithArray:self];
+    [backingArray removeObjectIdenticalTo:[NSNull null]];
+    return [NSArray arrayWithArray:backingArray];
+}
+
 - (NSArray *)$each:(void (^)(id obj))block {
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     block(obj);

@@ -68,6 +68,13 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat([array $at:1], equalTo(@"bar"));
       });
     });
+    
+    describe(@"-$compact", ^{
+      it(@"returns array with nulls removed", ^{
+        NSArray *strippedArray = [[NSArray arrayWithObjects:@1, @2, [NSNull null], @3, nil] $compact];
+        assertThat(strippedArray, equalTo(@[@1, @2, @3]));
+      });
+    });
 
     describe(@"-$each:", ^{
       it(@"runs block for each item, passing the item as an argument", ^{
