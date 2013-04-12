@@ -3,6 +3,7 @@
 @interface NSArray (ConciseKit)
 
 - (id)$first;
+- (NSArray *)$first:(int)n;
 - (id)$last;
 - (BOOL)$all:(BOOL (^)(id obj))block;
 - (BOOL)$any:(BOOL (^)(id obj))block;

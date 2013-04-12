@@ -20,6 +20,12 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat([array $first], equalTo(@"foo"));
       });
     });
+    
+    describe(@"-$first n", ^{
+      it(@"should return first n objects from array", ^{
+        assertThat([array $first:2], equalTo(@[@"foo", @"bar"]));
+      });
+    });
 
     describe(@"-$last", ^{
       it(@"returns the first object", ^{

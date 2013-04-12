@@ -6,6 +6,11 @@
   return [self objectAtIndex:0];
 }
 
+- (NSArray *)$first:(int)n {
+  NSRange range = NSMakeRange(0, (NSUInteger)n);
+  return [self subarrayWithRange:range];
+}
+
 - (id)$last {
   return [self lastObject];
 }
