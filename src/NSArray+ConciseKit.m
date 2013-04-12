@@ -180,9 +180,10 @@
     return lastObject;
 }
 
-- (NSMutableArray *)$unshift:(id)anObject {
-    [self insertObject:anObject atIndex:0];
-    return self;
+- (NSArray *)$replace:(NSArray *)otherArray {
+  [self removeAllObjects];
+  [self addObjectsFromArray:otherArray];
+  return self;
 }
 
 - (id)$shift; {
@@ -190,6 +191,11 @@
     
     [self removeObjectAtIndex:0];
     return firstObject;
+}
+
+- (NSMutableArray *)$unshift:(id)anObject {
+  [self insertObject:anObject atIndex:0];
+  return self;
 }
 
 @end

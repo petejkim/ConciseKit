@@ -280,6 +280,13 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat([marray $pop], equalTo(@"baz"));
       });
     });
+    
+    describe(@"-$replace", ^{
+      it(@"should replace self with new array", ^{
+        [marray $replace:@[@1, @2, @3]];
+        assertThat(marray, equalTo(@[@1, @2, @3]));
+      });
+    });
       
     describe(@"-$unshift:", ^{
       it(@"adds first object", ^{

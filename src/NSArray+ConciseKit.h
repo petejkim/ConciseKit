@@ -32,7 +32,8 @@
 - (NSMutableArray *)$drop:(int)n;
 - (NSMutableArray *)$push:(id)anObject;
 - (id)$pop;
-- (NSMutableArray *)$unshift:(id)anObject;
+- (NSArray *)$replace:(NSArray *)otherArray;
 - (id)$shift;
+- (NSMutableArray *)$unshift:(id)anObject;
 
 @end
