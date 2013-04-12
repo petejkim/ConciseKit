@@ -147,6 +147,18 @@ DESCRIBE(NSArrayConciseKit) {
         assertThatBool([nonEmptyArray $empty], equalToBool(NO));
       });
     });
+    
+    describe(@"-$include", ^{
+      it(@"should return YES if any obj in array passes the specification", ^{
+        BOOL included = [array $include:@"bar"];
+        assertThatBool(included, equalToBool(YES));
+      });
+      
+      it(@"should return NO if no obj in array passes the specification", ^{
+        BOOL included = [array $include:@"trent"];
+        assertThatBool(included, equalToBool(NO));
+      });
+    });
 
     describe(@"-$map:", ^{
       it(@"runs block for each item, passing the item as an argument, and creates a new array containing the return values of the block", ^{

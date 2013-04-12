@@ -15,6 +15,7 @@
 - (NSArray *)$eachWithStop:(void (^)(id obj, BOOL *stop))block;
 - (NSArray *)$eachWithIndexAndStop:(void (^)(id obj, NSUInteger idx, BOOL *stop))block;
 - (BOOL)$empty;
+- (BOOL)$include:(id)obj;
 - (NSArray *)$map:(id (^)(id obj))block;
 - (NSArray *)$mapWithIndex:(id (^)(id obj, NSUInteger idx))block;
 - (id)$reduce:(id (^)(id memo, id obj))block;

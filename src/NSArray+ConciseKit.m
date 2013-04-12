@@ -72,6 +72,14 @@
   return [self count] == 0;
 }
 
+- (BOOL)$include:(id)someObj {
+  NSIndexSet *indexes = [self indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+    return obj == someObj;
+  }];
+  
+  return [indexes count] > 0;
+}
+
 - (NSArray *)$map:(id (^)(id obj))block {
   __block NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
