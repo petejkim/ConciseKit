@@ -78,11 +78,9 @@ DESCRIBE(NSArrayConciseKit) {
     
     describe(@"-$concat", ^{
       it(@"should concatenate self with argument array", ^{
-        NSArray *arrayOne = @[@1, @2];
-        NSArray *arrayTwo = @[@3, @4];
-        NSArray *concatenatedArray = [arrayOne $concat:arrayTwo];
-        
-        assertThat(concatenatedArray, equalTo(@[@1, @2, @3, @4]));
+        NSArray *concatenatedArray = [array $concat:@[@3, @4]];
+
+        assertThat(concatenatedArray, equalTo(@[@"foo", @"bar", @"baz", @3, @4]));
       });
     });
 
@@ -221,6 +219,13 @@ DESCRIBE(NSArrayConciseKit) {
           assertThatInteger([newArray count], equalToInteger(0));
           [newArray addObject:@"lol"];
           assertThat(newArray, equalTo([NSArray arrayWithObject:@"lol"]));
+      });
+    });
+    
+    describe(@"-$drop", ^{
+      it(@"should return a MutableArray with n objects removed from beginning of array", ^{
+        NSMutableArray *droppedArray = [marray $drop:2];
+        assertThat(droppedArray, equalTo(@[@"baz"]));
       });
     });
 

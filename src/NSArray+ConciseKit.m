@@ -141,6 +141,17 @@
     #define IF_ARC(with, without) without
 #endif
 
+- (NSMutableArray *)$drop:(int)n {
+  if (n < 1)
+    return self;
+  
+  NSRange dropRange = NSMakeRange(0, n);
+  NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self];
+  [mutableArray removeObjectsInRange:dropRange];
+  
+  return mutableArray;
+}
+
 - (NSMutableArray *)$push:(id)anObject {
   [self addObject:anObject];
   return self;

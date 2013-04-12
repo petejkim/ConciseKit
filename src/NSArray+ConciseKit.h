@@ -26,6 +26,7 @@
 
 @interface NSMutableArray (ConciseKit)
 
+- (NSMutableArray *)$drop:(int)n;
 - (NSMutableArray *)$push:(id)anObject;
 - (id)$pop;
 - (NSMutableArray *)$unshift:(id)anObject;
