@@ -75,6 +75,16 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat(strippedArray, equalTo(@[@1, @2, @3]));
       });
     });
+    
+    describe(@"-$concat", ^{
+      it(@"should concatenate self with argument array", ^{
+        NSArray *arrayOne = @[@1, @2];
+        NSArray *arrayTwo = @[@3, @4];
+        NSArray *concatenatedArray = [arrayOne $concat:arrayTwo];
+        
+        assertThat(concatenatedArray, equalTo(@[@1, @2, @3, @4]));
+      });
+    });
 
     describe(@"-$each:", ^{
       it(@"runs block for each item, passing the item as an argument", ^{

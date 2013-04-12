@@ -8,6 +8,7 @@
 - (BOOL)$any:(BOOL (^)(id obj))block;
 - (id)$at:(NSUInteger)index;
 - (NSArray *)$compact;
+- (NSArray *)$concat:(NSArray *)otherArray;
 - (NSArray *)$each:(void (^)(id obj))block;
 - (NSArray *)$eachWithIndex:(void (^)(id obj, NSUInteger idx))block;
 - (NSArray *)$eachWithStop:(void (^)(id obj, BOOL *stop))block;

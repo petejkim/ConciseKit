@@ -28,6 +28,13 @@
     return [NSArray arrayWithArray:backingArray];
 }
 
+- (NSArray *)$concat:(NSArray *)otherArray {
+  NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self];
+  [mutableArray addObjectsFromArray:otherArray];
+  return [NSArray arrayWithArray:mutableArray];
+}
+
+
 - (NSArray *)$each:(void (^)(id obj))block {
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     block(obj);
