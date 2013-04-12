@@ -129,6 +129,18 @@ DESCRIBE(NSArrayConciseKit) {
         assertThatInteger(i, equalToInteger(4));
       });
     });
+    
+    describe(@"-$empty", ^{
+      it(@"should return YES if there are no objects in the array", ^{
+        NSArray *emptyArray = [NSArray array];
+        assertThatBool([emptyArray $empty], equalToBool(YES));
+      });
+      
+      it(@"should return NO if there are an objects in array", ^{
+        NSArray *nonEmptyArray = @[@1];
+        assertThatBool([nonEmptyArray $empty], equalToBool(NO));
+      });
+    });
 
     describe(@"-$map:", ^{
       it(@"runs block for each item, passing the item as an argument, and creates a new array containing the return values of the block", ^{
