@@ -115,6 +115,11 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 ### NSValue shorthands
         $nonretained(), $pointer(), $point(), $range(), $rect(), $size()
 
+### NSNotificationCenter shorthands
+        $listen(@"foo", self, @selector(handleFoo:))    => [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleFoo:) name:@"foo" object:nil]
+        $notify(@"foo") => [[NSNotificationCenter defaultCenter] postNotificationName:@"foo" object:nil]
+        $notifyWithObject(@"foo", bar) => [[NSNotificationCenter defaultCenter] postNotificationName:@"foo" object:bar]
+
 ## Additions
 
 ### NSArray
@@ -226,11 +231,13 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [string $insert:@"foo" at:1] => [string insertString:@"foo" atIndex:1] (+ returns self)
         [string $set:@"foo"]         => [string setString:@"foo"]              (+ returns self)
 
+
 ## Contributors
 
 * [nolanw](http://github.com/nolanw)
 * [listrophy](https://github.com/listrophy)
 * [gerry3](https://github.com/gerry3) @ [Inigral](https://github.com/inigral)
+* [michaelforrest](https://github.com/michaelforrest) @ [Good To Hear](https://github.com/goodtohear)
 
 ## License
 

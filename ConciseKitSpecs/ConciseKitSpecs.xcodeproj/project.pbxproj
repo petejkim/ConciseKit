@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0924B4D71562944D008176FF /* Listener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0924B4D61562944D008176FF /* Listener.m */; };
 		CB6C70DD14E21B3A0016D5D7 /* NSSetConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6C70DC14E21B3A0016D5D7 /* NSSetConciseKitSpec.m */; };
 		E90DAB9D12A66B1D000A36AE /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90DAB9C12A66B1D000A36AE /* Foo.m */; };
 		E90DADE612A6A07A000A36AE /* CKMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = E90DADE512A6A07A000A36AE /* CKMocks.m */; };
@@ -49,6 +50,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0924B4D51562944D008176FF /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listener.h; sourceTree = "<group>"; };
+		0924B4D61562944D008176FF /* Listener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listener.m; sourceTree = "<group>"; };
+		0924B4D91562976A008176FF /* CKNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKNotifications.h; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -145,6 +149,8 @@
 				E90DAB9C12A66B1D000A36AE /* Foo.m */,
 				E90DADE412A6A07A000A36AE /* CKMocks.h */,
 				E90DADE512A6A07A000A36AE /* CKMocks.m */,
+				0924B4D51562944D008176FF /* Listener.h */,
+				0924B4D61562944D008176FF /* Listener.m */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 			children = (
 				E95368A51521CA5A00AA3B81 /* CKAdditions.h */,
 				E95368A61521CA5A00AA3B81 /* CKMacros.h */,
+				0924B4D91562976A008176FF /* CKNotifications.h */,
 				E95368A71521CA5A00AA3B81 /* CKSingleton.h */,
 				E95368A81521CA5A00AA3B81 /* ConciseKit.h */,
 				E95368A91521CA5A00AA3B81 /* ConciseKit.m */,
@@ -276,6 +283,7 @@
 				E95368B11521CA5A00AA3B81 /* NSArray+ConciseKit.m in Sources */,
 				E95368B21521CA5A00AA3B81 /* NSDictionary+ConciseKit.m in Sources */,
 				E95368B31521CA5A00AA3B81 /* NSString+ConciseKit.m in Sources */,
+				0924B4D71562944D008176FF /* Listener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

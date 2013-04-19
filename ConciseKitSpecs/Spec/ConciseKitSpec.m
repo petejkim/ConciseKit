@@ -2,6 +2,7 @@
 #import "ConciseKit.h"
 #import "Foo.h"
 #import "CKMocks.h"
+#import "Listener.h"
 
 #if __has_feature(objc_arc)
     #define ARCLESS(block)
@@ -189,5 +190,30 @@ DESCRIBE($) {
     NSString *foo = @"foo";
     assertThat($safe(foo), equalTo(@"foo"));
   });
+    
+    
+  describe(@"$listen", ^{
+      NSString * notificationName = @"foo";
+      __block Listener * listener;
+      beforeEach(^{
+          listener = [[Listener alloc] init];
+      });
+      it(@"supports plain $notify", ^{
+          assertThatBool(listener.notificationWasReceived, equalToBool(NO));
+          $listen(notificationName, listener, @selector(receiveNotification));
+          $notify(notificationName);
+          assertThatBool(listener.notificationWasReceived, equalToBool(YES));
+      });
+      it(@"supports $notifyWithObject:", ^{
+          NSObject * foo = [[NSObject alloc] init];
+          assertThatBool(listener.notificationWasReceived, equalToBool(NO));
+          assertThat(listener.objectReceivedViaNotification, equalTo(nil));    
+          $listen(notificationName, listener, @selector(receiveNotification:));
+          $notifyWithObject(notificationName,foo);
+          assertThatBool(listener.notificationWasReceived, equalToBool(YES));
+          assertThat(listener.objectReceivedViaNotification,is(foo));
+      });
+  });
+
 }
 DESCRIBE_END
