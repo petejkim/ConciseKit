@@ -195,6 +195,13 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat(result, equalTo($integer(60)));
       });
     });
+    
+    describe(@"-$reverse", ^{
+      it(@"should return a new array with contents of self in reverse order", ^{
+        NSArray *reversedArray = [array $reverse];
+        assertThat(reversedArray, equalTo(@[@"baz", @"bar", @"foo"]));
+      });
+    });
 
     describe(@"-$select:", ^{
       it(@"creates a subarray from elements where the block returns YES", ^{

@@ -116,6 +116,10 @@
   return ret;
 }
 
+- (NSArray *)$reverse {
+  return [[self reverseObjectEnumerator] allObjects];
+}
+
 - (NSArray *)$select:(BOOL(^)(id obj))block {
   __block NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
