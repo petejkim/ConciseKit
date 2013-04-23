@@ -6,13 +6,39 @@
   return [self objectAtIndex:0];
 }
 
+- (NSArray *)$first:(int)n {
+  NSRange range = NSMakeRange(0, (NSUInteger)n);
+  return [self subarrayWithRange:range];
+}
+
 - (id)$last {
   return [self lastObject];
+}
+
+- (BOOL)$all:(BOOL (^)(id))block {
+  return [self count] == [[self $select:block] count];
+}
+
+- (BOOL)$any:(BOOL (^)(id))block {
+  return [[self $select:block] count] > 0;
 }
 
 - (id)$at:(NSUInteger)index {
   return [self objectAtIndex:index];
 }
+
+- (NSArray *)$compact {
+    NSMutableArray *backingArray = [NSMutableArray arrayWithArray:self];
+    [backingArray removeObjectIdenticalTo:[NSNull null]];
+    return [NSArray arrayWithArray:backingArray];
+}
+
+- (NSArray *)$concat:(NSArray *)otherArray {
+  NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self];
+  [mutableArray addObjectsFromArray:otherArray];
+  return [NSArray arrayWithArray:mutableArray];
+}
+
 
 - (NSArray *)$each:(void (^)(id obj))block {
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -40,6 +66,18 @@
     block(obj, idx, stop);
   }];
   return self;
+}
+
+- (BOOL)$empty {
+  return [self count] == 0;
+}
+
+- (BOOL)$include:(id)someObj {
+  NSIndexSet *indexes = [self indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+    return obj == someObj;
+  }];
+  
+  return [indexes count] > 0;
 }
 
 - (NSArray *)$map:(id (^)(id obj))block {
@@ -76,6 +114,10 @@
     ret = block(ret, obj);
   }];
   return ret;
+}
+
+- (NSArray *)$reverse {
+  return [[self reverseObjectEnumerator] allObjects];
 }
 
 - (NSArray *)$select:(BOOL(^)(id obj))block {
@@ -120,6 +162,17 @@
     #define IF_ARC(with, without) without
 #endif
 
+- (NSMutableArray *)$drop:(int)n {
+  if (n < 1)
+    return self;
+  
+  NSRange dropRange = NSMakeRange(0, n);
+  NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self];
+  [mutableArray removeObjectsInRange:dropRange];
+  
+  return mutableArray;
+}
+
 - (NSMutableArray *)$push:(id)anObject {
   [self addObject:anObject];
   return self;
@@ -131,9 +184,10 @@
     return lastObject;
 }
 
-- (NSMutableArray *)$unshift:(id)anObject {
-    [self insertObject:anObject atIndex:0];
-    return self;
+- (NSArray *)$replace:(NSArray *)otherArray {
+  [self removeAllObjects];
+  [self addObjectsFromArray:otherArray];
+  return self;
 }
 
 - (id)$shift; {
@@ -141,6 +195,11 @@
     
     [self removeObjectAtIndex:0];
     return firstObject;
+}
+
+- (NSMutableArray *)$unshift:(id)anObject {
+  [self insertObject:anObject atIndex:0];
+  return self;
 }
 
 @end

@@ -20,16 +20,73 @@ DESCRIBE(NSArrayConciseKit) {
         assertThat([array $first], equalTo(@"foo"));
       });
     });
+    
+    describe(@"-$first n", ^{
+      it(@"should return first n objects from array", ^{
+        assertThat([array $first:2], equalTo(@[@"foo", @"bar"]));
+      });
+    });
 
     describe(@"-$last", ^{
       it(@"returns the first object", ^{
         assertThat([array $last], equalTo(@"baz"));
       });
     });
+      
+    describe(@"-$all", ^{
+      it(@"returns YES if all values of the array match the specification", ^{
+        BOOL allValues = [$arr(@"ant", @"bear", @"cat") $all:^BOOL(NSString *obj) {
+          return [obj length] >= 3;
+        }];
+          
+        assertThatBool(allValues, equalToBool(YES));
+      });
+      
+      it(@"returns NO if 1 or more values do not match the specification", ^{
+        BOOL allValues = [$arr(@"ant", @"bear", @"cat") $all:^BOOL(NSString *obj) {
+          return [obj length] >= 4;
+        }];
+        
+        assertThatBool(allValues, equalToBool(NO));
+      });
+    });
+    
+    describe(@"-$any", ^{
+      it(@"should return YES if one or more values match the specification", ^{
+        BOOL anyValues = [$arr(@"ant", @"bear", @"cat") $any:^BOOL(NSString *obj) {
+          return [obj length] >= 4;
+        }];
+        
+        assertThatBool(anyValues, equalToBool(YES));
+      });
+      
+      it(@"should return NO none of the values match the specification", ^{
+        BOOL anyValues = [$arr(@"ant", @"bear", @"cat") $any:^BOOL(NSString *obj) {
+          return [obj length] >= 5;
+        }];
+        
+        assertThatBool(anyValues, equalToBool(NO));
+      });
+    });
 
     describe(@"-$at:", ^{
       it(@"returns the object at the given index", ^{
         assertThat([array $at:1], equalTo(@"bar"));
+      });
+    });
+    
+    describe(@"-$compact", ^{
+      it(@"returns array with nulls removed", ^{
+        NSArray *strippedArray = [[NSArray arrayWithObjects:@1, @2, [NSNull null], @3, nil] $compact];
+        assertThat(strippedArray, equalTo(@[@1, @2, @3]));
+      });
+    });
+    
+    describe(@"-$concat", ^{
+      it(@"should concatenate self with argument array", ^{
+        NSArray *concatenatedArray = [array $concat:@[@3, @4]];
+
+        assertThat(concatenatedArray, equalTo(@[@"foo", @"bar", @"baz", @3, @4]));
       });
     });
 
@@ -78,6 +135,30 @@ DESCRIBE(NSArrayConciseKit) {
         assertThatInteger(i, equalToInteger(4));
       });
     });
+    
+    describe(@"-$empty", ^{
+      it(@"should return YES if there are no objects in the array", ^{
+        NSArray *emptyArray = [NSArray array];
+        assertThatBool([emptyArray $empty], equalToBool(YES));
+      });
+      
+      it(@"should return NO if there are an objects in array", ^{
+        NSArray *nonEmptyArray = @[@1];
+        assertThatBool([nonEmptyArray $empty], equalToBool(NO));
+      });
+    });
+    
+    describe(@"-$include", ^{
+      it(@"should return YES if any obj in array passes the specification", ^{
+        BOOL included = [array $include:@"bar"];
+        assertThatBool(included, equalToBool(YES));
+      });
+      
+      it(@"should return NO if no obj in array passes the specification", ^{
+        BOOL included = [array $include:@"trent"];
+        assertThatBool(included, equalToBool(NO));
+      });
+    });
 
     describe(@"-$map:", ^{
       it(@"runs block for each item, passing the item as an argument, and creates a new array containing the return values of the block", ^{
@@ -112,6 +193,13 @@ DESCRIBE(NSArrayConciseKit) {
           return $integer([memo integerValue] * [obj integerValue]);
         }];
         assertThat(result, equalTo($integer(60)));
+      });
+    });
+    
+    describe(@"-$reverse", ^{
+      it(@"should return a new array with contents of self in reverse order", ^{
+        NSArray *reversedArray = [array $reverse];
+        assertThat(reversedArray, equalTo(@[@"baz", @"bar", @"foo"]));
       });
     });
 
@@ -170,6 +258,13 @@ DESCRIBE(NSArrayConciseKit) {
           assertThat(newArray, equalTo([NSArray arrayWithObject:@"lol"]));
       });
     });
+    
+    describe(@"-$drop", ^{
+      it(@"should return a MutableArray with n objects removed from beginning of array", ^{
+        NSMutableArray *droppedArray = [marray $drop:2];
+        assertThat(droppedArray, equalTo(@[@"baz"]));
+      });
+    });
 
     describe(@"-$push:", ^{
       it(@"adds an object", ^{
@@ -190,6 +285,13 @@ DESCRIBE(NSArrayConciseKit) {
       
       it(@"returns last object", ^{
         assertThat([marray $pop], equalTo(@"baz"));
+      });
+    });
+    
+    describe(@"-$replace", ^{
+      it(@"should replace self with new array", ^{
+        [marray $replace:@[@1, @2, @3]];
+        assertThat(marray, equalTo(@[@1, @2, @3]));
       });
     });
       
