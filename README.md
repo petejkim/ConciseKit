@@ -234,6 +234,9 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         [string $insert:@"foo" at:1] => [string insertString:@"foo" atIndex:1] (+ returns self)
         [string $set:@"foo"]         => [string setString:@"foo"]              (+ returns self)
 
+### NSNumber
+        [$int(1) $ordinal]   => "1st"
+
 ## Contributors
 
 * [nolanw](http://github.com/nolanw)
