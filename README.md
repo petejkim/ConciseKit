@@ -214,10 +214,18 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
 
 ### NSString
 
-        [string $append:@"foo"]  => [string stringByAppendString:@"foo"]
-        [string $prepend:@"foo"] => [NSString stringWithFormat:@"%@%@", @"foo", string]
-        [string $split:@","]     => [string componentsSeparatedByString:@","]
-        [string $split]          => [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
+        [string $append:@"foo"]     => [string stringByAppendString:@"foo"]
+        [string $prepend:@"foo"]    => [NSString stringWithFormat:@"%@%@", @"foo", string]
+        [string $split:@","]        => [string componentsSeparatedByString:@","]
+        [string $split]             => [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
+        [string $capitalize]        => [string capitalizedString]
+        [string $downcase]          => [string lowercaseString]
+        [string $upcase]            => [string uppercaseString]
+        [@"abc" $mult:3]            => @"abcabcabc"
+        [@"abcd" $center:10]        => @"   abcd   "
+        [@"abcd" $center:12 str:@"123"] => @"1231abcd1231"
+        [@"abc" $chop]              => @"ab"
+        [@"abcde" includes:@"bc"]   => YES
 
 ### NSMutableString
 

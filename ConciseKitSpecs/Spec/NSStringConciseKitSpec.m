@@ -38,6 +38,63 @@ DESCRIBE(NSStringConciseKit) {
         assertThat([@"ab cd ef" $split], equalTo($arr(@"ab",@"cd",@"ef")));
       });
     });
+
+    describe(@"-$capitalize", ^{
+      it(@"capitalizes the first character", ^{
+          assertThat([@"aBc2" $capitalize], equalTo(@"Abc2"));
+      });
+    });
+
+    describe(@"-$downcase", ^{
+      it(@"makes every character lowercase", ^{
+          assertThat([@"ABc2" $downcase], equalTo(@"abc2"));
+      });
+    });
+      
+    describe(@"-$upcase", ^{
+      it(@"makes every character uppercase", ^{
+          assertThat([@"aBc2" $upcase], equalTo(@"ABC2"));
+      });
+    });
+
+    describe(@"-$center:", ^{
+      it(@"centers string in width of spaces", ^{
+          assertThat([@"hello" $center:20], equalTo(@"       hello        "));
+          assertThat([@"hello" $center:4], equalTo(@"hello"));
+      });
+    });
+      
+    describe(@"-$mult:", ^{
+      it(@"copies a string a specific number of times", ^{
+          assertThat([@"abc" $mult:0], equalTo(@""));
+          assertThat([@"abc" $mult:1], equalTo(@"abc"));
+          assertThat([@"abc" $mult:4], equalTo(@"abcabcabcabc"));
+      });
+    });
+
+    describe(@"-$center:str:", ^{
+      it(@"centers string in specified width centered and padded with str", ^{
+          assertThat([@"hello" $center:20 str:@"123"], equalTo(@"1231231hello12312312"));
+          assertThat([@"hello" $center:15 str:@"123"], equalTo(@"12312hello12312"));
+          assertThat([@"hello" $center:4 str:@"123"], equalTo(@"hello"));
+      });
+    });
+
+    describe(@"-$chop", ^{
+      it(@"removes the last letter in the string", ^{
+          assertThat([@"string" $chop], equalTo(@"strin"));
+          assertThat([@"a" $chop], equalTo(@""));
+          assertThat([@"string\n" $chop], equalTo(@"string"));
+      });
+    });
+
+    describe(@"-$includes:", ^{
+      it(@"determines whether or not this string is included", ^{
+          assert([@"abcdef" $includes:@"bcd"]);
+      });
+    });
+      
+
   });
 
   describe(@"NSMutableString (ConciseKit)", ^{
