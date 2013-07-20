@@ -18,6 +18,10 @@
     return [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+- (NSString *)$chop {
+    return [self substringToIndex:[self length] - 1];
+}
+
 - (NSString *)$capitalize {
     return [self capitalizedString];
 }
@@ -67,10 +71,6 @@
         self = [self $prepend:evenPad];
     }
     return self;
-}
-
-- (NSString *)$chop {
-    return [self substringToIndex:[self length] - 1];
 }
 
 - (BOOL)$includes:(NSString *)aString {

@@ -38,6 +38,14 @@ DESCRIBE(NSStringConciseKit) {
         assertThat([@"ab cd ef" $split], equalTo($arr(@"ab",@"cd",@"ef")));
       });
     });
+      
+    describe(@"-$chop", ^{
+      it(@"removes the last letter in the string", ^{
+          assertThat([@"string" $chop], equalTo(@"strin"));
+          assertThat([@"a" $chop], equalTo(@""));
+          assertThat([@"string\n" $chop], equalTo(@"string"));
+      });
+    });
 
     describe(@"-$capitalize", ^{
       it(@"capitalizes the first character", ^{
@@ -56,13 +64,6 @@ DESCRIBE(NSStringConciseKit) {
           assertThat([@"aBc2" $upcase], equalTo(@"ABC2"));
       });
     });
-
-    describe(@"-$center:", ^{
-      it(@"centers string in width of spaces", ^{
-          assertThat([@"hello" $center:20], equalTo(@"       hello        "));
-          assertThat([@"hello" $center:4], equalTo(@"hello"));
-      });
-    });
       
     describe(@"-$mult:", ^{
       it(@"copies a string a specific number of times", ^{
@@ -72,19 +73,18 @@ DESCRIBE(NSStringConciseKit) {
       });
     });
 
+    describe(@"-$center:", ^{
+      it(@"centers string in width of spaces", ^{
+          assertThat([@"hello" $center:20], equalTo(@"       hello        "));
+          assertThat([@"hello" $center:4], equalTo(@"hello"));
+      });
+    });
+
     describe(@"-$center:str:", ^{
       it(@"centers string in specified width centered and padded with str", ^{
           assertThat([@"hello" $center:20 str:@"123"], equalTo(@"1231231hello12312312"));
           assertThat([@"hello" $center:15 str:@"123"], equalTo(@"12312hello12312"));
           assertThat([@"hello" $center:4 str:@"123"], equalTo(@"hello"));
-      });
-    });
-
-    describe(@"-$chop", ^{
-      it(@"removes the last letter in the string", ^{
-          assertThat([@"string" $chop], equalTo(@"strin"));
-          assertThat([@"a" $chop], equalTo(@""));
-          assertThat([@"string\n" $chop], equalTo(@"string"));
       });
     });
 

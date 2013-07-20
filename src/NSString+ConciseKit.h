@@ -6,16 +6,14 @@
 - (NSString *)$prepend:(NSString *)aString;
 - (NSArray *)$split:(NSString *)aString;
 - (NSArray *)$split;
-- (NSString *)$mult:(NSUInteger)times;
+- (NSString *)$chop;
 - (NSString *)$capitalize;
 - (NSString *)$downcase;
 - (NSString *)$upcase;
+- (NSString *)$mult:(NSUInteger)times;
 - (NSString *)$center:(NSUInteger)width;
 - (NSString *)$center:(NSUInteger)width str:(NSString *)aString;
-- (NSString *)$chop;
 - (BOOL)$includes:(NSString *)aString;
-
-
 
 @end
 
