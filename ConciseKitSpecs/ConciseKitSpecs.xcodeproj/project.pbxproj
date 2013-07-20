@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4506D6CE179A4FCA0004A744 /* NSNumber+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4506D6CD179A4FCA0004A744 /* NSNumber+ConciseKit.m */; };
+		4506D6D1179A54360004A744 /* NSNumberConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4506D6D0179A54360004A744 /* NSNumberConciseKitSpec.m */; };
 		CB6C70DD14E21B3A0016D5D7 /* NSSetConciseKitSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6C70DC14E21B3A0016D5D7 /* NSSetConciseKitSpec.m */; };
 		E90DAB9D12A66B1D000A36AE /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90DAB9C12A66B1D000A36AE /* Foo.m */; };
 		E90DADE612A6A07A000A36AE /* CKMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = E90DADE512A6A07A000A36AE /* CKMocks.m */; };
@@ -53,6 +55,9 @@
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4506D6CC179A4FCA0004A744 /* NSNumber+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+ConciseKit.h"; sourceTree = "<group>"; };
+		4506D6CD179A4FCA0004A744 /* NSNumber+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+ConciseKit.m"; sourceTree = "<group>"; };
+		4506D6D0179A54360004A744 /* NSNumberConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberConciseKitSpec.m; sourceTree = "<group>"; };
 		CB6C70DC14E21B3A0016D5D7 /* NSSetConciseKitSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSetConciseKitSpec.m; sourceTree = "<group>"; };
 		E90DAB9B12A66B1D000A36AE /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		E90DAB9C12A66B1D000A36AE /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 				CB6C70DC14E21B3A0016D5D7 /* NSSetConciseKitSpec.m */,
 				E925015712D92E250018D373 /* NSDictionaryConciseKitSpec.m */,
 				E9692C2512B4B4FF00520396 /* NSStringConciseKitSpec.m */,
+				4506D6D0179A54360004A744 /* NSNumberConciseKitSpec.m */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -191,6 +197,8 @@
 				E95368AD1521CA5A00AA3B81 /* NSDictionary+ConciseKit.m */,
 				E95368AE1521CA5A00AA3B81 /* NSString+ConciseKit.h */,
 				E95368AF1521CA5A00AA3B81 /* NSString+ConciseKit.m */,
+				4506D6CC179A4FCA0004A744 /* NSNumber+ConciseKit.h */,
+				4506D6CD179A4FCA0004A744 /* NSNumber+ConciseKit.m */,
 			);
 			name = src;
 			path = ../src;
@@ -276,6 +284,8 @@
 				E95368B11521CA5A00AA3B81 /* NSArray+ConciseKit.m in Sources */,
 				E95368B21521CA5A00AA3B81 /* NSDictionary+ConciseKit.m in Sources */,
 				E95368B31521CA5A00AA3B81 /* NSString+ConciseKit.m in Sources */,
+				4506D6CE179A4FCA0004A744 /* NSNumber+ConciseKit.m in Sources */,
+				4506D6D1179A54360004A744 /* NSNumberConciseKitSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
