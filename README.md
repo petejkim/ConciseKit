@@ -9,7 +9,7 @@ A set of Objective-C additions and macros that lets you to write code more quick
 Use [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
 ```pod
-pod "ConciseKit", :git => "https://github.com/basitali/ConciseKit.git" 'ConciseKit', '~> 0.1.2'
+pod "ConciseKit", :git => "https://github.com/basitali/ConciseKit.git"
 ```
 
 or
