@@ -7,6 +7,10 @@
   return NSHomeDirectory();
 }
 
++ (NSString *)libraryPath {
+  return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+}
+
 + (NSString *)desktopPath {
   return [NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 }

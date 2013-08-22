@@ -8,8 +8,8 @@ A set of Objective-C additions and macros that lets you to write code more quick
 
 Use [CocoaPods](https://github.com/CocoaPods/CocoaPods)
 
-```ruby
-dependency 'ConciseKit', '~> 0.1.2'
+```pod
+pod "ConciseKit", :git => "https://github.com/basitali/ConciseKit.git"
 ```
 
 or
@@ -37,6 +37,7 @@ or
         [$ documentPath] => path to user's document directory
         [$ appPath]      => path to app directory
         [$ resourcePath] => path to app's resources directory
+        [$ libraryPath]     => path to app's library directory
 
 ### waitUntil
 
@@ -78,6 +79,15 @@ Useful when writing tests for asynchronous tasks. Default timeout is 10 seconds,
         $new(Foo)       => [[[Foo alloc] init] autorelease]
         $eql(foo, bar)  => [foo isEqual:bar]
         $safe(obj)      => (obj == [NSNull null] ? nil : obj)
+
+### System Versioning Preprocessor Macros
+        if (SYSTEM_VERSION_LESS_THAN(@"4.0")) {
+        ...
+        }
+
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"3.1.1")) {
+        ...
+        }
 
 ### NSArray shorthands
 

@@ -166,7 +166,7 @@ DESCRIBE($) {
         [$ waitUntil:condition timeOut:20.0];
         NSArray *array = [CKMocks callsForSelector:@selector(waitUntil:timeOut:interval:) in:[$ class]];
         assertThatUnsignedInteger([array count], equalToUnsignedInteger(1));
-        assertThat([array $at:0], equalTo($arr(condition, $double(20.0), $double(0.1))));
+        assertThat([array at:0], equalTo($arr(condition, $double(20.0), $double(0.1))));
         [$ swizzleClassMethod:@selector(waitUntil:timeOut:interval:) in:[$ class] with:@selector(waitUntil:timeOut:interval:) in:[CKMocks class]];
       });
     });
@@ -177,7 +177,7 @@ DESCRIBE($) {
         [$ waitUntil:condition];
         NSArray *array = [CKMocks callsForSelector:@selector(waitUntil:timeOut:interval:) in:[$ class]];
         assertThatUnsignedInteger([array count], equalToUnsignedInteger(1));
-        assertThat([array $at:0], equalTo($arr(condition, $double(10.0), $double(0.1))));
+        assertThat([array at:0], equalTo($arr(condition, $double(10.0), $double(0.1))));
         [$ swizzleClassMethod:@selector(waitUntil:timeOut:interval:) in:[$ class] with:@selector(waitUntil:timeOut:interval:) in:[CKMocks class]];
       });
     });
