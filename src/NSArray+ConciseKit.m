@@ -58,6 +58,18 @@
   return array;
 }
 
+- (id)$safeFirst {
+  return $safe([self objectAtIndex:0]);
+}
+
+- (id)$safeLast {
+  return $safe([self lastObject]);
+}
+
+- (id)$safeAt:(NSUInteger)index {
+  return $safe([self objectAtIndex:index]);
+}
+
 - (id)$reduce:(id (^)(id memo, id obj))block {
   __block id ret = nil;
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

@@ -6,6 +6,9 @@
 - (NSString *)$prepend:(NSString *)aString;
 - (NSArray *)$split:(NSString *)aString;
 - (NSArray *)$split;
+- (BOOL)$isBlank;
+- (NSInteger)$indexOf:(NSString *)theSubString from:(NSInteger)theFrom;
+- (NSString *)$substringFrom:(NSInteger)theFrom to:(NSInteger)theTo;
 
 @end
 

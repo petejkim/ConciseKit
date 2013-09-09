@@ -18,6 +18,25 @@
     return [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+- (BOOL)$isBlank {
+    return ([self length] == 0);
+}
+
+- (NSInteger)$indexOf:(NSString *)theSubString from:(NSInteger)theFrom {
+    NSRange theRange = NSMakeRange(theFrom, self.length - theFrom);
+    
+	NSRange theIndex = [self rangeOfString:theSubString options:NSLiteralSearch range:theRange];
+	if (theIndex.location == NSNotFound) {
+		return -1;
+	}
+	return theIndex.location + theIndex.length;
+}
+
+- (NSString *)$substringFrom:(NSInteger)theFrom to:(NSInteger)theTo {
+	NSRange theRange = NSMakeRange(theFrom, theTo - theFrom);
+	return [self substringWithRange:theRange];
+}
+
 @end
 
 @implementation NSMutableString (ConciseKit)
