@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-
+#import "CKMacros.h"
 @interface NSArray (ConciseKit)
 
 - (id)$first;

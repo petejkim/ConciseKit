@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-
+#import "CKMacros.h"
 @interface NSDictionary (ConciseKit)
 
 - (id)$for:(id)aKey;
