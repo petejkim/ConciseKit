@@ -5,7 +5,9 @@
 - (id)$for:(id)aKey {
   return [self objectForKey:aKey];
 }
-
+- (id)$safeFor:(id)aKey {
+  return $safe([self objectForKey:aKey]);
+}
 - (NSArray *)$keys {
     return [self allKeys];
 }

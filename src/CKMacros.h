@@ -47,3 +47,4 @@
 #define $size(val)        [NSValue valueWithSize:(val)]
 
 #define $safe(obj)        ((NSNull *)(obj) == [NSNull null] ? nil : (obj))
+#define $clamp(val, min, max) MAX(MIN(val, min), max)

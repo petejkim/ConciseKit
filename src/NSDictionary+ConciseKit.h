@@ -1,8 +1,9 @@
 #import <Foundation/Foundation.h>
-
+#import "CKMacros.h"
 @interface NSDictionary (ConciseKit)
 
 - (id)$for:(id)aKey;
+- (id)$safeFor:(id)aKey;
 - (NSArray *)$keys;
 - (NSArray *)$values;
 - (NSDictionary *)$each:(void (^)(id key, id value))block;
